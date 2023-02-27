@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"
+    />
+{#    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">#}
+    <title>Service</title>
+</head>
+<body >
+
+       <nav
+          class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 ">
+          <div
+            class="container px-4 mx-auto flex flex-wrap items-center justify-between"
+          >
+            <div
+              class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
+            >
+              <H2 class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white">
+                  AyuCare</H2>
+              <button
+                class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                type="button"
+                onclick="toggleNavbar('example-collapse-navbar')"
+              >
+                <i class="text-white fas fa-bars"></i>
+              </button>
+            </div>
+            <div
+              class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
+              id="example-collapse-navbar">
+
+              <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+                <li class="flex items-center ">
+                    <a href="service.html">
+                        <h3 class="lg:text-gray-300 text-gray-500 text-lg leading-lg " > Services &nbsp;&nbsp;&nbsp; </h3>
+                    </a>
+                </li>
+
+                <li class="flex items-center">
+                    <a href="aboutus.html">
+                        <h3 class="lg:text-gray-300 text-gray-500 text-lg leading-lg " > About Us &nbsp;&nbsp;&nbsp; </h3>
+                    </a>
+                </li>
+
+                <li class="flex items-center">
+                {#  REGISTER BUTTON  #}
+
+                    <button class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full"
+                        type="button"
+                        style="transition: all 0.15s ease 0s;">
+                        Register
+                    </button>
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+        </nav>
+
+        <br><br>
+        <section class="pb-20 bg-gray-300 -mt-24 " style="padding-top: 150px; padding-left: 50px;">
+            <div class="flex justify-left ">
+              <div
+                class="flex flex-col rounded-lg bg-white shadow-lg dark:bg-neutral-700 md:max-w-xl md:flex-row">
+                <img
+                  class="h-auto max-w-xs rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                  src="../static/assets/img/avatar.png"
+                  alt="" />
+                <div class="flex flex-col justify-start p-6">
+                  <h5
+                    class="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                    Patient 182
+                  </h5>
+                  <lable class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                    Name &nbsp;&nbsp;: <br>Age &nbsp;&nbsp;&nbsp;   : <br>E-mail &nbsp;&nbsp;:
+                  </lable>
+                  <p class="text-xs text-neutral-500 dark:text-neutral-300">
+                    Last updated 3 mins ago
+                  </p>
+                </div>
+              </div>
+            </div>
+            <br><br>
+
+            <!-- Jumbotron -->
+            <div
+              class="rounded-lg bg-neutral-100 p-6 text-neutral-700 shadow-lg dark:bg-neutral-600 dark:text-neutral-200 dark:shadow-black/30">
+              <h3 class="mb-5 text-2xl font-semibold">Select Symptoms</h3>
+              <table>
+                  <tr>
+                      <td class="mb-3 xl:w-96"><div class="flex justify-center">
+                      <div class="mb-3 xl:w-96">
+                        <select data-te-select-init data-te-select-clear-button="true">
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                          <option value="4">Four</option>
+                          <option value="5">Five</option>
+                        </select>
+                      </div>
+                    </div></td>
+                    <td class="mb-3 xl:w-96"><div class="flex justify-center">
+                      <div class="mb-3 xl:w-96">
+                        <select data-te-select-init data-te-select-clear-button="true">
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                          <option value="4">Four</option>
+                          <option value="5">Five</option>
+                        </select>
+                      </div>
+                    </div></td>
+                      <td class="mb-3 xl:w-96"><div class="flex justify-center">
+                      <div class="mb-3 xl:w-96">
+                        <select data-te-select-init data-te-select-clear-button="true">
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                          <option value="4">Four</option>
+                          <option value="5">Five</option>
+                        </select>
+                      </div>
+                    </div></td>
+                      <td class="mb-3 xl:w-96"><div class="flex justify-center">
+                      <div class="mb-3 xl:w-96">
+                        <select data-te-select-init data-te-select-clear-button="true">
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                          <option value="4">Four</option>
+                          <option value="5">Five</option>
+                        </select>
+                      </div>
+                    </div></td>
+                  </tr>
+              </table>
+              <hr
+                class="my-6 h-0.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-30" />
+                <h3><b>Prediction Result</b></h3>
+              <p class="mb-4">
+
+              </p>
+
+            </div>
+            <!-- Jumbotron -->
+
+            <div
+              class="rounded-lg bg-neutral-100 p-6 text-neutral-700 shadow-lg dark:bg-neutral-600 dark:text-neutral-200 dark:shadow-black/30">
+              <h3 class="mb-5 text-2xl font-semibold">Recommennded Medicine</h3>
+
+
+              <p class="mb-4">
+
+              </p>
+
+            </div>
+             <div
+              class="rounded-lg bg-neutral-100 p-6 text-neutral-700 shadow-lg dark:bg-neutral-600 dark:text-neutral-200 dark:shadow-black/30">
+              <h3 class="mb-5 text-2xl font-semibold">Recommended Doctors</h3>
+
+
+              <p class="mb-4">
+
+              </p>
+
+            </div>
+        </section>
+
+</body>
+</html>
