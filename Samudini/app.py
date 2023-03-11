@@ -17,7 +17,8 @@ def register():  # put application's code here
 
 @app.route('/service')
 def service():  # put application's code here
-    return render_template("service.html")
+    return render_template('service.html')
+
 
 
 if __name__ == '__main__':
