@@ -5,106 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <link rel="shortcut icon" href="../static/assets/img/ayucare%20logo.png" />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="../static/assets/img/apple-icon.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"
-    />
-{#      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>#}
-{#      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">#}
-    <title>AyuCare</title>
+    <link rel="apple-touch-icon" sizes="76x76" href="../static/assets/img/apple-icon.png"/>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"/>
+      <script src="https://cdn.tailwindcss.com"></script>
+   <title>AyuCare</title>
   </head>
 
-  <body class="text-gray-800 antialiased">
+  <body class=" antialiased ">
 
-    <nav
-      class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 ">
-      <div
-        class="container px-4 mx-auto flex flex-wrap items-center justify-between"
-      >
-        <div
-          class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
-        >
-          <H2 class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white">
-              AyuCare</H2>
-          <button
-            class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-            type="button"
-            onclick="toggleNavbar('example-collapse-navbar')"
-          >
-            <i class="text-white fas fa-bars"></i>
-          </button>
-        </div>
-        <div
-          class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
-          id="example-collapse-navbar">
-
-          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-            <li class="flex items-center ">
-                <a href="service.html">
-                    <h3 class="lg:text-gray-300 text-gray-500 text-lg leading-lg " > Services &nbsp;&nbsp;&nbsp; </h3>
+    {#    Navigation Bar#}
+     <nav class="flex items-center text-black">
+         <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 ">
+        <img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer">
+        <ul class="flex-1 text-center text-black">
+            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
+            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
                 </a>
-            </li>
-
-            <li class="flex items-center">
-                <a href="aboutus.html">
-                    <h3 class="lg:text-gray-300 text-gray-500 text-lg leading-lg " > About Us &nbsp;&nbsp;&nbsp; </h3>
-                </a>
-            </li>
-
-            <li class="flex items-center">
-            {#  REGISTER BUTTON  #}
-
-                <button class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full"
-                    type="button"
-                    style="transition: all 0.15s ease 0s;">
-                    Register
-                </button>
-            </li>
-
+              </li>
           </ul>
+             <a href="{{ url_for('register') }}">
+                  <button class="bg-black text-white active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full px-6" type="button" style="transition: all 0.15s ease 0s;"> Register </button>
+                 </a>
+         </div>
+         </nav>
+     {#    Navigation Bar#}
 
-        </div>
-      </div>
-    </nav>
-
+    {#    Main Section#}
     <main>
-        <div
-        class= "relative pt-16 pb-32 flex content-center items-center justify-center"
-        style="min-height: 75vh;">
-        <div class="absolute top-0 w-full h-full bg-center bg-cover"
-
-          style='background-image: url("https://unsplash.com/photos/dxtkv8qLaY0");'
-        >
-            <span
-            id="blackOverlay"
-            class="w-full h-full absolute opacity-75 bg-black"
-          ></span>
+        <div class= "relative pt-20 pb-32 flex content-center items-center justify-center" style="min-height: 75vh;" >
+            <div class="absolute top-0 w-full h-full bg-center bg-cover" style='background-image: url("../static/assets/img/m.png");'>
+            <span class="w-full h-full absolute  "></span>
         </div>
         <div class="container relative mx-auto">
           <div class="items-center flex flex-wrap">
             <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
               <div class="pr-12">
-                <h1 class="text-white font-bold text-5xl text-black">
+                <h1 class="pt-20 font-bold text-5xl text-black">
                   AYUCARE
                 </h1>
                   <br><br>
-                <p class="mt-4 text-lg text-gray-300">
-                  STATE-OF-THE-ART DISEASE PREDICTION
-                    <br>&<br> AYURVEDIC TREATMENT RECOMMENDATION PLATFORM
+                <p class="mt-4 text-lg text-black">
+                  <b>STATE-OF-THE-ART DISEASE PREDICTION
+                      <br>&<br> AYURVEDIC TREATMENT RECOMMENDATION PLATFORM</b>
                 </p>
                   <br><br>
                   <center>
-                      <a href="signup.html">
-                      <button class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full"
+                      <a href="{{ url_for('signup') }}">
+                      <button class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-8 py-2 rounded outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full transition duration-150
+                          ease-in-out bg-gradient-to-r from-green-400 to-blue-500 hover:from-gray-500 hover:to-gray-200 ..."
                         type="button"
                         style="transition: all 0.15s ease 0s;">
                         Begin Your Journey Today
@@ -115,9 +64,7 @@
             </div>
           </div>
         </div>
-        <div
-          class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
-          style="height: 70px;">
+        <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden" style="height: 70px;">
           <svg
             class="absolute bottom-0 overflow-hidden"
             xmlns="http://www.w3.org/2000/svg"
@@ -134,20 +81,16 @@
           </svg>
         </div>
       </div>
-      <section class="pb-20 bg-gray-300 -mt-24 ">
+      <section class="pb-20 bg-gray-300 -mt-24  ">
         <div class="container mx-auto px-4">
-          <div class="flex flex-wrap">
+          <div class="flex flex-wrap ">
             <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-              <div
-                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
-              >
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                 <div class="px-4 py-5 flex-auto">
-                  <div
-                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
-                  >
+                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                     <i class="fas fa-award"></i>
                   </div>
-                    <a href="service.html">
+                    <a href="{{ url_for('service') }}">
                   <h6 class="text-xl font-semibold">Predicting Symptoms</h6>
                   <p class="mt-2 mb-4 text-gray-600">
                     Our advanced model predicts <br> <b>Migraine, Gastric, Diarrhea & Arthritis </b> <br>from symptoms.
@@ -159,16 +102,12 @@
               </div>
             </div>
             <div class="w-full md:w-4/12 px-4 text-center">
-              <div
-                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
-              >
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                 <div class="px-4 py-5 flex-auto">
-                  <div
-                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400"
-                  >
+                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
                     <i class="fas fa-retweet"></i>
                   </div>
-                    <a href="service.html">
+                    <a href="{{ url_for('service') }}">
                   <h6 class="text-xl font-semibold ">Recommending Ayurvedic Medicine</h6>
                   <p class="mt-2 mb-4 text-gray-600">
                    Our Ayurvedic medicine recommendation system suggests personalized,
@@ -180,16 +119,12 @@
               </div>
             </div>
             <div class="pt-6 w-full md:w-4/12 px-4 text-center">
-              <div
-                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
-              >
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                 <div class="px-4 py-5 flex-auto">
-                  <div
-                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400"
-                  >
+                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
                     <i class="fas fa-fingerprint"></i>
                   </div>
-                    <a href="service.html">
+                    <a href="{{ url_for('service') }}">
                   <h6 class="text-xl font-semibold">Recommending Doctors</h6>
                   <p class="mt-2 mb-4 text-gray-600">
                     Our Ayurvedic doctor recommendation system connects users with certified practitioners,
@@ -205,24 +140,18 @@
 {#           SECTION 02 #}
           <div class="flex flex-wrap items-center mt-32">
             <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
-              <div
-                class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100"
-              >
+              <div class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
                 <i class="fas fa-user-friends text-xl"></i>
               </div>
               <h3 class="text-3xl mb-2 font-semibold leading-normal">
                 Learn More About AyuCare
               </h3>
-              <p
-                class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
-              >
+              <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
                  Machine learning models are revolutionizing the field of Ayurvedic medicine by providing
                     personalized and accurate disease predictions and natural remedies. <br>
 
               </p>
-              <p
-                class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700"
-              >
+              <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
                 These models use advanced algorithms and constantly updated medical research to offer a
                     holistic approach to healthcare that empowers users to identify potential health issues
                     and seek timely medical attention. <br>Our Ayurvedic medicine and doctor recommendation
@@ -232,8 +161,7 @@
 
             </div>
             <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
-              <div
-                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
 {#                   SECTION 2 IMAGE#}
                 <img alt="..." src="../static/assets/img/sec2.jpg"/>
                 <blockquote class="relative p-8 mb-4">
@@ -242,8 +170,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 583 95"
                     class="absolute left-0 w-full block"
-                    style="height: 95px; top: -94px;"
-                  >
+                    style="height: 95px; top: -94px;">
                     <polygon
                       points="-30,95 583,95 583,65"
                       class="text-pink-600 fill-current"
@@ -252,7 +179,7 @@
                   <h4 class="text-xl font-bold text-white">
 
                   </h4>
-                  <p class="text-md font-light mt-2 text-white">
+                  <p class="text-md font-light mt-2 text-black">
                     At AyuCare, we are dedicated to providing you with the most innovative and
                       reliable healthcare services. Our state-of-the-art research is ongoing
                       as we continue to perfect our disease detection capabilities, including Migraine,
@@ -265,9 +192,7 @@
             </div>
           </div>
         </div>
-
       </section>
-
 
       <section class="pt-20 pb-48">
         <div class="container mx-auto px-4">
@@ -282,34 +207,22 @@
           <div class="flex flex-wrap">
             <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
               <div class="px-6">
-                <img
-                  alt="..."
-                  src="../static/assets/img/team-1-800x800.jpg"
-                  class="shadow-lg rounded-full max-w-full mx-auto"
-                  style="max-width: 120px;"
-                />
+                <img alt="..." src="../static/assets/img/team-1-800x800.jpg" class="shadow-lg rounded-full max-w-full mx-auto"
+                  style="max-width: 120px;"/>
                 <div class="pt-6 text-center">
                   <h5 class="text-xl font-bold">Ryan Tompson</h5>
                   <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
                     Web Developer
                   </p>
                   <div class="mt-6">
-                    <button
-                      class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-twitter"></i></button
-                    ><button
-                      class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-facebook-f"></i></button
-                    ><button
-                      class="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-dribbble"></i>
-                    </button>
+                     <button class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                        <i class="fab fa-twitter"></i></button>
+                      <button class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                        <i class="fab fa-facebook-f"></i>
+                      </button>
+                      <button class="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                        <i class="fab fa-dribbble"></i>
+                      </button>
                   </div>
                 </div>
               </div>
@@ -455,9 +368,13 @@
                   Join our community today and prioritize your health with AyuCare.
               </p>
                 <br>
-                <center><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                    Register Now
-                </button></center>
+                <center> <a href="{{ url_for('register') }}">
+                      <button class=" text-xs font-bold uppercase px-4 py-2 rounded outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full transition duration-150
+                          ease-in-out bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ..."
+                        type="button"
+                        style="transition: all 0.15s ease 0s;">
+                        Register
+                      </button></a></center>
             </div>
           </div>
 
@@ -465,7 +382,9 @@
       </section>
 
     </main>
+    {#    Main Section#}
 
+    {#    Footer Section#}
     <footer class="relative bg-gray-300 pt-8 pb-6">
       <div
         class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
@@ -512,8 +431,8 @@
                   <li>
                     <a
                       class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://blog.creative-tim.com"
-                      >Services</a
+                      href="{{ url_for('service') }}">
+                      Services</a
                     >
                   </li>
 
@@ -529,21 +448,21 @@
                   <li>
                     <a
                       class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/terms"
+                      href="#"
                       >Terms &amp; Conditions</a
                     >
                   </li>
                   <li>
                     <a
                       class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/privacy"
+                      href="#"
                       >Privacy Policy</a
                     >
                   </li>
                   <li>
                     <a
                       class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/contact-us"
+                      href="#"
                       >Contact Us</a
                     >
                   </li>
@@ -560,7 +479,7 @@
             <div class="text-sm text-gray-600 font-semibold py-1">
               Copyright © 2023 AyuCare
               <a
-                href="https://www.creative-tim.com"
+                href="#"
                 class="text-gray-600 hover:text-gray-900"
                 >G04 </a
               >.
@@ -569,6 +488,7 @@
         </div>
       </div>
     </footer>
+    {#    Footer Section#}
 
   </body>
   <script>
