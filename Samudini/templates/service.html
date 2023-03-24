@@ -22,11 +22,11 @@
 
 <body class="text-black bg-gray-300">
 
-        {#    Navigation Bar#}
+        <!--   Navigation Bar-->
         <nav class="flex items-center text-black">
 
-         <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 ">
-        <img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer">
+         <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl">
+        <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
         <ul class="flex-1 text-center text-black">
             <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
             <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
@@ -38,7 +38,7 @@
                  </a>
          </div>
          </nav>
-        {#    Navigation Bar#}
+        <!--Navigation Bar-->
 
         <br><br>
 
@@ -72,70 +72,30 @@
               <h3 class="mb-5 text-2xl font-semibold">Select Symptoms</h3>
                 <p class="text-xs">Please select the four symptoms that apply to you from the drop-down menus below.</p><br>
               <div class="mb-3 xl:w-full grid grid-cols-4 gap-4">
-                  <div class="flex justify-center">
-                      <div class="mb-3 xl:w-96">
-                        <select data-te-select-init data-te-select-clear-button="true">
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                          <option value="4">Four</option>
-                          <option value="5">Five</option>
-                        </select>
-                      </div>
-                    </div>
 
+                  <form method="POST">
+                    {{ form.csrf_token }}
+                    {{ form.symptom1.label }}
+                    {{ form.symptom1() }}
+                    {{ form.symptom2.label }}
+                    {{ form.symptom2() }}
+                    {{ form.symptom3.label }}
+                    {{ form.symptom3() }}
+                    {{ form.symptom4.label }}
+                    {{ form.symptom4() }}
+                    <!--{{ form.submit }}
 
-                        <div class="flex justify-center">
-                      <div class="mb-3 xl:w-96">
-                        <select data-te-select-init data-te-select-clear-button="true">
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                          <option value="4">Four</option>
-                          <option value="5">Five</option>
-                        </select>
-                      </div>
-                    </div>
-
-
-                          <div class="flex justify-center">
-                      <div class="mb-3 xl:w-96">
-                        <select data-te-select-init data-te-select-clear-button="true">
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                          <option value="4">Four</option>
-                          <option value="5">Five</option>
-                        </select>
-                      </div>
-                    </div>
-
-                          <div class="flex justify-center">
-                      <div class="mb-3 xl:w-96">
-                        <select data-te-select-init data-te-select-clear-button="true">
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                          <option value="4">Four</option>
-                          <option value="5">Five</option>
-                        </select>
-                      </div>
-                    </div>
+                    -->
+                    <button class="bg-black  text-white  font-bold py-2 px-4 rounded-full" type="submit">Submit</button>
+                </form>
+                {{ predicted_result }}
               </div>
 
                 <br>
-                <center>
-                    <p class="text-xs">Once you have selected your symptoms, please click the submit button to continue. Thank you!</p><br>
-                    <button class="modal-open bg-black  text-white  font-bold py-2 px-4 rounded-full">Submit</button></center>
-            </div>
+
             <!-- Jumbotron -->
 
-            <!-- Medicine | Doctor Button -->
-            <div class="flex space-x-16 px-20 py-8">
-                <a href="{{ url_for('med_service') }}"><button class=" bg-black  text-white  font-bold py-2 px-4 rounded-full">Medicine</button></a>
-                <a href="{{ url_for('doc_service') }}"><button class=" bg-black  text-white  font-bold py-2 px-6 rounded-full">Doctors </button></a>
-            </div>
-            <!-- Medicine| Doctor Button -->
+
 
             <!--Modal-->
             <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
@@ -150,11 +110,11 @@
                     <span class="text-sm">(Esc)</span>
                   </div>
 
-                  <!-- Add margin if you want to see some of the overlay behind the modal-->
+                  <!-- Add margin if you want to see some overlay behind the modal-->
                   <div class="modal-content py-4 text-left px-6">
                     <!--Title-->
                     <div class="flex justify-between items-center pb-3">
-                      <p class="text-2xl font-bold">Simple Modal!</p>
+                      <p class="text-2xl font-bold">Result!</p>
                       <div class="modal-close cursor-pointer z-50">
                         <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
                           <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
@@ -164,24 +124,33 @@
 
                     <!--Body-->
                     <p>Predicted Result</p>
-                    <p>...</p>
-                    <p>...</p>
-                    <p>...</p>
-                    <p>...</p>
+                    <br>
+
+                      <!-- Predicted Value should be display here------------>
+                      <h1>The predicted result is: {{ predicted_result }}</h1>
+
 
                     <!--Footer-->
                     <div class="flex justify-end pt-2">
-{#                      <button class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2">Action</button>#}
                       <button class="modal-close px-4 bg-black p-3 rounded-lg text-white ">Close</button>
                     </div>
 
                   </div>
                 </div>
               </div>
+            </div>
             <!--Modal-->
+
         </section>
 
-        {#    Footer Section#}
+            <!-- Medicine | Doctor Button -->
+            <div class="flex space-x-16 px-20 py-8 align-left">
+                <a href="{{ url_for('med_service') }}"><button class=" bg-black  text-white  font-bold py-2 px-4 rounded-full">Medicine</button></a>
+                <a href="{{ url_for('doc_service') }}"><button class=" bg-black  text-white  font-bold py-2 px-6 rounded-full">Doctors </button></a>
+            </div>
+            <!-- Medicine| Doctor Button -->
+
+        <!--    Footer Section-->
         <footer class="relative bg-gray-300 pt-8 pb-6">
       <div
         class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
@@ -206,8 +175,6 @@
         <div class="flex flex-wrap">
           <div class="w-full lg:w-6/12 px-4">
             <h4 class="text-3xl font-semibold">AYUCARE</h4>
-{#              <img src="../static/assets/img/ayucare%20logo.png" alt="img" >#}
-
 
           </div>
           <div class="w-full lg:w-6/12 px-4">
@@ -285,49 +252,9 @@
         </div>
       </div>
     </footer>
-        {#    Footer Section#}
-
-  <script>
-    var openmodal = document.querySelectorAll('.modal-open')
-    for (var i = 0; i < openmodal.length; i++) {
-      openmodal[i].addEventListener('click', function(event){
-    	event.preventDefault()
-    	toggleModal()
-      })
-    }
-
-    const overlay = document.querySelector('.modal-overlay')
-    overlay.addEventListener('click', toggleModal)
-
-    var closemodal = document.querySelectorAll('.modal-close')
-    for (var i = 0; i < closemodal.length; i++) {
-      closemodal[i].addEventListener('click', toggleModal)
-    }
-
-    document.onkeydown = function(evt) {
-      evt = evt || window.event
-      var isEscape = false
-      if ("key" in evt) {
-    	isEscape = (evt.key === "Escape" || evt.key === "Esc")
-      } else {
-    	isEscape = (evt.keyCode === 27)
-      }
-      if (isEscape && document.body.classList.contains('modal-active')) {
-    	toggleModal()
-      }
-    };
+       <!--    Footer Section-->
 
 
-    function toggleModal () {
-      const body = document.querySelector('body')
-      const modal = document.querySelector('.modal')
-      modal.classList.toggle('opacity-0')
-      modal.classList.toggle('pointer-events-none')
-      body.classList.toggle('modal-active')
-    }
-
-
-  </script>
 
 </body>
 </html>
