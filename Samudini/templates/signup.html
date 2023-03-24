@@ -9,11 +9,11 @@
 </head>
 <body class="bg-gray-300">
 
-      {#    Navigation Bar#}
+      <!--   Navigation bar-->
      <nav class="flex items-center text-black">
 
-         <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 ">
-        <img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer">
+         <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl">
+        <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
         <ul class="flex-1 text-center text-black">
             <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
             <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
@@ -25,10 +25,10 @@
                  </a>
          </div>
          </nav>
-      {#    Navigation Bar#}
+       <!--   Navigation bar-->
       <br>
 
-        {#      Form part#}
+         <!--   Form part-->
         <div class="flex justify-center items-center h-screen  place-items-center ">
         <div id="form" class="bg-white block  p-6 rounded-xl shadow-md shadow-slate-300 w-90">
            <form action="" class="">
@@ -50,14 +50,14 @@
                 <br> <br>
                <!-- Sign In -->
                 <input type="submit" name="" id="SignIn"
-                    class="bg-black w-full h-10 cursor-pointer text-white rounded-md text-sm"><br>
-
+                    class="bg-black w-full h-10 cursor-pointer text-white rounded-md text-sm"><br><br>
+                <p class="text-xs my-2">Don't have an account? <a href="{{ url_for ('register') }}" class="text-blue-600">Register</a></p>
             </form>
         </div>
     </div>
-        {#      Form part#}
+       <!--   Form part-->
 
-        {#    Footer Section#}
+       <!--  Footer section-->
         <footer class="relative bg-gray-300 pt-8 pb-6">
       <div
         class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
@@ -161,7 +161,7 @@
         </div>
       </div>
     </footer>
-        {#    Footer Section#}
+        <!--  Footer section-->
 
 </body>
 </html>
