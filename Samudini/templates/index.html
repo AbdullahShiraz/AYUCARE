@@ -14,10 +14,10 @@
 
   <body class=" antialiased ">
 
-    {#    Navigation Bar#}
-     <nav class="flex items-center text-black">
-         <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 ">
-        <img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer">
+    <!--  Navigation Bar-->
+     <nav class="flex items-center text-black ">
+         <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl ">
+             <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
         <ul class="flex-1 text-center text-black">
             <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
             <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
@@ -29,9 +29,9 @@
                  </a>
          </div>
          </nav>
-     {#    Navigation Bar#}
+     <!--  Navigation Bar-->
 
-    {#    Main Section#}
+    <!--  Main section-->
     <main>
         <div class= "relative pt-20 pb-32 flex content-center items-center justify-center" style="min-height: 75vh;" >
             <div class="absolute top-0 w-full h-full bg-center bg-cover" style='background-image: url("../static/assets/img/m.png");'>
@@ -54,7 +54,7 @@
                       <a href="{{ url_for('signup') }}">
                       <button class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-8 py-2 rounded outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full transition duration-150
                           ease-in-out bg-gradient-to-r from-green-400 to-blue-500 hover:from-gray-500 hover:to-gray-200 ..."
-                        type="button"
+                        type="button" id="beginButton"
                         style="transition: all 0.15s ease 0s;">
                         Begin Your Journey Today
                       </button></a>
@@ -137,7 +137,7 @@
               </div>
             </div>
           </div>
-{#           SECTION 02 #}
+            <!-- SECTION 2 -->
           <div class="flex flex-wrap items-center mt-32">
             <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
               <div class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
@@ -162,7 +162,7 @@
             </div>
             <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
               <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
-{#                   SECTION 2 IMAGE#}
+                  <!-- SECTION 2 IMAGE-->
                 <img alt="..." src="../static/assets/img/sec2.jpg"/>
                 <blockquote class="relative p-8 mb-4">
                   <svg
@@ -382,9 +382,9 @@
       </section>
 
     </main>
-    {#    Main Section#}
+    <!--  Main section-->
 
-    {#    Footer Section#}
+    <!--  Footer section-->
     <footer class="relative bg-gray-300 pt-8 pb-6">
       <div
         class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
@@ -488,13 +488,18 @@
         </div>
       </div>
     </footer>
-    {#    Footer Section#}
+    <!--  Footer section-->
 
-  </body>
-  <script>
+   <script>
     function toggleNavbar(collapseID) {
       document.getElementById(collapseID).classList.toggle("hidden");
       document.getElementById(collapseID).classList.toggle("block");
+        const beginButton = document.getElementById("beginButton");
+        beginButton.addEventListener("click", function() {
+        window.location.href = "signup.html";
+});
     }
   </script>
+  </body>
+
 </html>
