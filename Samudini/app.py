@@ -181,7 +181,7 @@ def serviceValidation(selected_symptoms):
 
     # Extract the selected symptoms from the form data
 
-    print(selected_symptoms)
+    #print(selected_symptoms)
     # Convert the selected symptoms to a 30-element list of 1s and 0s
     inputs = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     for symptom in selected_symptoms:
@@ -190,12 +190,12 @@ def serviceValidation(selected_symptoms):
 
     inputs = np.array(inputs)  # convert list to NumPy array
     inputs = inputs.reshape(1, -1)
-    print(inputs)
+    #print(inputs)
 
     # Pass the inputs to your machine learning model and retrieve the predicted result
     predicted_result = model_N.predict(inputs)
-    print(predicted_result)
-    return predicted_result
+    print(predicted_result[0])
+    return predicted_result[0]
     # Return the predicted result to the user
 
 @app.route('/')
@@ -207,7 +207,7 @@ def index():  # put application's code here
 def signup():  # put application's code here
     return render_template("signup.html")
 
-
+predicted_result = ""
 @app.route('/register')
 def register():  # put application's code here
     return render_template("register.html")
@@ -216,6 +216,7 @@ def register():  # put application's code here
 
 @app.route('/service', methods=['GET','POST'])
 def service():
+    global predicted_result
     form = serviceForm()
     if form.validate_on_submit():
         selectedSymptoms = [form.symptom1.data, form.symptom2.data, form.symptom3.data, form.symptom4.data]
@@ -227,6 +228,10 @@ def service():
 
 @app.route('/med_service')
 def med_service():  # put application's code here
+    global predicted_result
+    if predicted_result == "Migraine":
+        # predicted_result =
+
     return render_template("med_service.html")
 
 
