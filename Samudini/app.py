@@ -6,7 +6,7 @@ import joblib
 import warnings
 from sklearn.exceptions import DataConversionWarning
 from flask_wtf import FlaskForm
-from wtforms import SelectField, SubmitField
+from wtforms import SelectField, SubmitField, StringField
 from wtforms.validators import InputRequired, ValidationError
 
 warnings.filterwarnings("ignore", category=UserWarning)
@@ -16,6 +16,9 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secretkey'
 f = open("DecisionTree-Model.sav", "rb")
 model_N = pickle.load(f)
+
+f2 = open("drugTree.pkl", "rb")
+model_med = pickle.load(f2)
 
 symptom_mapping = {
     'acidity': 0,
@@ -50,6 +53,15 @@ symptom_mapping = {
     'belching': 29,
     'burning_ache': 30
 }
+
+class medForm(FlaskForm):
+    gender = SelectField('gender', choices=[(1,'male'),(0,'female')])
+    age = StringField(validators=[InputRequired()],render_kw={"placeholder": "age"})
+    severity = SelectField('severity', choices=[(0,'few days'),(1,'a week'),(2,'few weeks or more')])
+    disease = SelectField('disease', choices=[(0, 'diarrhea'), (1, 'gastritis'),
+                                                (2, 'osteoarthritis'),
+                                                (3, 'rheumatoid arthritis'),
+                                                (4, 'migraine')])
 
 
 class serviceForm(FlaskForm):
@@ -198,6 +210,18 @@ def serviceValidation(selected_symptoms):
     return predicted_result[0]
     # Return the predicted result to the user
 
+def medicineValidation(selected_symptoms):
+    # # put application's code here
+
+    #pre-processing required
+    inputs = np.array(selected_symptoms)  # convert list to NumPy array
+    inputs = inputs.reshape(1, -1)
+    # Pass the inputs to your machine learning model and retrieve the predicted result
+    predicted_result = model_med.predict(inputs)
+    print(predicted_result)
+    return predicted_result[0]
+    # Return the predicted result to the user
+
 @app.route('/')
 def index():  # put application's code here
     return render_template("index.html")
@@ -226,13 +250,27 @@ def service():
     return render_template('service.html', form=form)
 
 
-@app.route('/med_service')
+@app.route('/med_service', methods=['GET','POST'])
 def med_service():  # put application's code here
     global predicted_result
-    if predicted_result == "Migraine":
-        # predicted_result =
+    form = medForm()
+    # if predicted_result == "diarrhea":
+    #     predicted_result = 0
+    # elif predicted_result == "gastritis":
+    #     predicted_result = 1
+    # elif predicted_result == "osteoarthritis":
+    #     predicted_result = 2
+    # elif predicted_result == "rheumatoid arthritis":
+    #     predicted_result = 3
+    # else:
+    #     predicted_result = 4
 
-    return render_template("med_service.html")
+    if form.validate_on_submit():
+        selectedSymptoms = [form.gender.data, form.age.data, form.severity.data, form.disease.data]
+        predicted_result = medicineValidation(selectedSymptoms)
+        return render_template('med_service.html', form=form, predicted_result=predicted_result)
+
+    return render_template("med_service.html", form = form)
 
 
 @app.route('/doc_service')

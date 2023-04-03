@@ -75,8 +75,23 @@
              <br>
                 <center>
                     <p class="text-xs">Once you have selected your symptoms, please click the submit button to continue. Thank you!</p><br>
-                    <button class="modal-open bg-black  text-white  font-bold py-2 px-4 rounded-full">Submit</button></center>
 
+                  <form method="POST">
+                    {{ form.csrf_token }}
+                    {{ form.gender.label }}
+                    {{ form.gender() }}
+                    {{ form.age.label }}
+                    {{ form.age() }}
+                    {{ form.severity.label }}
+                    {{ form.severity() }}
+                    {{ form.disease.label }}
+                    {{ form.disease() }}
+                    <!--{{ form.submit }}
+
+                    -->
+                    <button class="bg-black  text-white  font-bold py-2 px-4 rounded-full" type="submit">Submit</button>
+                </form>
+                    {{ predicted_result }}
             </div>
             <!-- Jumbotron -->
 
