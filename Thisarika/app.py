@@ -1,8 +1,7 @@
 from flask import Flask, session, render_template, request, redirect, flash
 import sqlite3
 import pyrebase
-import bcrypt
-from validate_email import validate_email
+
 
 app = Flask(__name__)
 app.secret_key = 'ayucare1'
@@ -40,30 +39,16 @@ def signup():  # firebase authendication code
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
+        if not email or not password:
+            return "Please complete all fields"
         try:
-            if not email or not password:
-                return "Please complete all fields"
-
-            if not validate_email(email):
-                raise ValueError("Invalid email address")
-
-            # Hash the password before storing it
-            hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-
+            email = request.form['email']
+            password = request.form['password']
             new_user = auth.create_user_with_email_and_password(email, password)
             auth.send_email_verification(new_user['idToken'])
-
-            flash('Verification email sent. Please check your inbox to complete the registration')
-            return redirect('/')
-
-        except ValueError as e:
-            flash(str(e))
-        except Exception as e:
-            if 'INVALID_PASSWORD' in str(e):
-                flash('check your password')
-            else:
-                flash(str(e))
-
+            return render_template('index.html')
+        except:
+            return render_template('signup.html')
     return render_template("signup.html")
 
 
@@ -101,7 +86,7 @@ def register():
             return render_template('index.html')
         except:
             existing_account1 = 'This email is already used'
-            return render_template('register.html', exist_message=existing_account1)
+            return render_template('index.html', exist_message=existing_account1)
 
     return render_template("register.html")
 
