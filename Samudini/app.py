@@ -12,14 +12,19 @@ from wtforms.validators import InputRequired, ValidationError
 warnings.filterwarnings("ignore", category=UserWarning)
 warnings.filterwarnings("ignore", category=DataConversionWarning)
 
+# Establishing Flask Connection
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secretkey'
+
+#Loading Diease Dectection Pickle File
 f = open("DecisionTree-Model.sav", "rb")
 model_N = pickle.load(f)
 
+#loading Medicine Recommendation Pickle file
 f2 = open("drugTree.pkl", "rb")
 model_med = pickle.load(f2)
 
+#Mapping Symptoms as indexes in dataset using dictionary
 symptom_mapping = {
     'acidity': 0,
     'indigestion': 1,
@@ -53,7 +58,7 @@ symptom_mapping = {
     'belching': 29,
     'burning_ache': 30
 }
-
+# Creating a sample form to intergrate
 class medForm(FlaskForm):
     gender = SelectField('gender', choices=[(1,'male'),(0,'female')])
     age = StringField(validators=[InputRequired()],render_kw={"placeholder": "age"})
@@ -63,7 +68,7 @@ class medForm(FlaskForm):
                                                 (3, 'rheumatoid arthritis'),
                                                 (4, 'migraine')])
 
-
+# Creating Symptoms dropdown Menu for selecting Symptoms
 class serviceForm(FlaskForm):
     symptom1 = SelectField('symptom1', choices=[('acidity','acidity'), ('indigestion','indigestion'),
                                                 ('headache','headache'),
@@ -187,39 +192,38 @@ class serviceForm(FlaskForm):
                                                 ('burning_ache', 'burning_ache')])
     #submit = SubmitField('Submit', render_kw={"class":"modal-open bg-black  text-white  font-bold py-2 px-4 rounded-full"})
 
-
+#Defining a fucntion to convert user inputs and predict
 def serviceValidation(selected_symptoms):
-    # # put application's code here
 
-    # Extract the selected symptoms from the form data
-
-    #print(selected_symptoms)
     # Convert the selected symptoms to a 30-element list of 1s and 0s
     inputs = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     for symptom in selected_symptoms:
         if symptom:
             inputs[symptom_mapping[symptom]] = 1
 
-    inputs = np.array(inputs)  # convert list to NumPy array
+    # convert list to NumPy array
+    inputs = np.array(inputs)
     inputs = inputs.reshape(1, -1)
-    #print(inputs)
+
 
     # Pass the inputs to your machine learning model and retrieve the predicted result
     predicted_result = model_N.predict(inputs)
     print(predicted_result[0])
-    return predicted_result[0]
-    # Return the predicted result to the user
 
-def medicineValidation(selected_symptoms):
+    # Return the predicted result to the user
+    return predicted_result[0]
+
+# Defining a function to recommend medicine
+def medicineValidation(selectedOptions):
     # # put application's code here
 
     #pre-processing required
-    inputs = np.array(selected_symptoms)  # convert list to NumPy array
+    inputs = np.array(selectedOptions)  # convert list to NumPy array
     inputs = inputs.reshape(1, -1)
     # Pass the inputs to your machine learning model and retrieve the predicted result
-    predicted_result = model_med.predict(inputs)
-    print(predicted_result)
-    return predicted_result[0]
+    recommend_Med = model_med.predict(inputs)
+    print(recommend_Med)
+    return recommend_Med[0]
     # Return the predicted result to the user
 
 @app.route('/')
@@ -266,9 +270,9 @@ def med_service():  # put application's code here
     #     predicted_result = 4
 
     if form.validate_on_submit():
-        selectedSymptoms = [form.gender.data, form.age.data, form.severity.data, form.disease.data]
-        predicted_result = medicineValidation(selectedSymptoms)
-        return render_template('med_service.html', form=form, predicted_result=predicted_result)
+        selectedOptions = [form.disease.data, form.age.data, form.gender.data, form.severity.data ]
+        recommend_Med = medicineValidation(selectedOptions)
+        return render_template('med_service.html', form=form, predicted_result=recommend_Med)
 
     return render_template("med_service.html", form = form)
 
