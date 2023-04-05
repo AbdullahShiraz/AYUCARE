@@ -1,0 +1,1289 @@
+disease,age,gender,severity,drug
+diarrhea,4,male,LOW,promegranate drink
+diarrhea,4,male,NORMAL,lime juice
+diarrhea,5,male,LOW,promegranate drink
+diarrhea,5,male,NORMAL,lime juice
+diarrhea,6,male,LOW,promegranate drink
+diarrhea,6,male,NORMAL,lime juice
+diarrhea,7,male,LOW,promegranate drink
+diarrhea,7,male,NORMAL,lime juice
+diarrhea,4,female,LOW,promegranate drink
+diarrhea,4,female,NORMAL,lime juice
+diarrhea,5,female,LOW,promegranate drink
+diarrhea,5,female,NORMAL,lime juice
+diarrhea,6,female,LOW,promegranate drink
+diarrhea,6,female,NORMAL,lime juice
+diarrhea,7,female,LOW,promegranate drink
+diarrhea,7,female,NORMAL,lime juice
+gastritis,8,male,HIGH,gandharvahastadi kashaya
+gastritis,8,male,NORMAL,gulachyadi kashayam
+gastritis,8,male,LOW,laxative
+gastritis,8,female,HIGH,gandharvahastadi kashaya
+gastritis,8,female,NORMAL,gulachyadi kashayam
+gastritis,8,female,LOW,laxative
+arthritis,8,male,NORMAL,nirugandi oil
+arthritis,8,male,LOW,nirugandi leaves paste
+arthritis,8,male,HIGH,ajwan water
+arthritis,8,female,NORMAL,nirugandi oil
+arthritis,8,female,LOW,nirugandi leaves paste
+arthritis,8,female,HIGH,ajwan water
+migraine,8,male,LOW,ginger
+migraine,8,male,NORMAL,fenugreek
+migraine,8,male,HIGH,shankhapushpi
+migraine,8,female,LOW,ginger
+migraine,8,female,NORMAL,fenugreek
+migraine,8,female,HIGH,shankhapushpi
+diarrhea,8,male,HIGH,haritaki
+diarrhea,8,male,NORMAL,bilwa
+diarrhea,8,male,LOW,kutaja
+diarrhea,8,female,HIGH,haritaki
+diarrhea,8,female,NORMAL,bilwa
+diarrhea,8,female,LOW,kutaja
+gastritis,9,male,HIGH,hingwastaka churna
+gastritis,9,male,NORMAL,lavanaabhaskara churna
+gastritis,9,male,LOW,ajamodarka
+gastritis,9,female,HIGH,hingwastaka churna
+gastritis,9,female,NORMAL,lavanaabhaskara churna
+gastritis,9,female,LOW,ajamodarka
+arthritis,9,male,NORMAL,nirugandi oil
+arthritis,9,male,LOW,dashmool powder with water
+arthritis,9,male,HIGH,dashmool oil
+arthritis,9,female,NORMAL,nirugandi oil
+arthritis,9,female,LOW,dashmool powder with water
+arthritis,9,female,HIGH,dashmool oil
+migraine,9,male,LOW,ashwagandha
+migraine,9,male,NORMAL,trikatu
+migraine,9,male,HIGH,shankh bhasma
+migraine,9,female,LOW,ashwagandha
+migraine,9,female,NORMAL,trikatu
+migraine,9,female,HIGH,shankh bhasma
+diarrhea,9,male,HIGH,dadimashtaka churna
+diarrhea,9,male,NORMAL,kutajarishta
+diarrhea,9,male,LOW,sanjni vati
+diarrhea,9,female,HIGH,dadimashtaka churna
+diarrhea,9,female,NORMAL,kutajarishta
+diarrhea,9,female,LOW,sanjni vati
+gastritis,10,male,HIGH,sankha vati
+gastritis,10,male,NORMAL,citrakadhi vati
+gastritis,10,male,LOW,hingvadi vati
+gastritis,10,female,HIGH,sankha vati
+gastritis,10,female,NORMAL,citrakadhi vati
+gastritis,10,female,LOW,hingvadi vati
+arthritis,10,male,NORMAL,shud laksha
+arthritis,10,male,LOW,ginger 
+arthritis,10,male,HIGH,suhunjana beej
+arthritis,10,female,NORMAL,shud laksha
+arthritis,10,female,LOW,ginger 
+arthritis,10,female,HIGH,suhunjana beej
+migraine,10,male,LOW,shankh-vati
+migraine,10,male,NORMAL,drakshasava
+migraine,10,male,HIGH,pathyadi guggulu
+migraine,10,female,LOW,shankh-vati
+migraine,10,female,NORMAL,drakshasava
+migraine,10,female,HIGH,pathyadi guggulu
+diarrhea,10,male,HIGH,tribhuvan kirti rasa
+diarrhea,10,male,NORMAL,mrutyunjay rasa
+diarrhea,10,male,LOW,sanjivani vati
+diarrhea,10,female,HIGH,tribhuvan kirti rasa
+diarrhea,10,female,NORMAL,mrutyunjay rasa
+diarrhea,10,female,LOW,sanjivani vati
+gastritis,11,male,HIGH,hingvastak churna
+gastritis,11,male,NORMAL,shivakshar pachan churna
+gastritis,11,male,LOW,lavan bhasker churna
+gastritis,11,female,HIGH,hingvastak churna
+gastritis,11,female,NORMAL,shivakshar pachan churna
+gastritis,11,female,LOW,lavan bhasker churna
+arthritis,11,male,NORMAL,praval pisti
+arthritis,11,male,LOW,akik pishti
+arthritis,11,male,HIGH,jahar mohra pishti
+arthritis,11,female,NORMAL,praval pisti
+arthritis,11,female,LOW,akik pishti
+arthritis,11,female,HIGH,jahar mohra pishti
+migraine,11,male,LOW,Mudgaparni
+migraine,11,male,NORMAL,Jyotishmati
+migraine,11,male,HIGH,Vasant Kusumakar Ras
+migraine,11,female,LOW,Mudgaparni
+migraine,11,female,NORMAL,Jyotishmati
+migraine,11,female,HIGH,Vasant Kusumakar Ras
+diarrhea,11,male,HIGH,tribhuvan kirti rasa
+diarrhea,11,male,NORMAL,mrutyunjay rasa
+diarrhea,11,male,LOW,sanjivani vati
+diarrhea,11,female,HIGH,tribhuvan kirti rasa
+diarrhea,11,female,NORMAL,mrutyunjay rasa
+diarrhea,11,female,LOW,sanjivani vati
+gastritis,12,male,HIGH,hingvastak churna
+gastritis,12,male,NORMAL,shivakshar pachan churna
+gastritis,12,male,LOW,lavan bhasker churna
+gastritis,12,female,HIGH,hingvastak churna
+gastritis,12,female,NORMAL,shivakshar pachan churna
+gastritis,12,female,LOW,lavan bhasker churna
+arthritis,12,male,NORMAL,praval pisti
+arthritis,12,male,LOW,akik pishti
+arthritis,12,male,HIGH,jahar mohra pishti
+arthritis,12,female,NORMAL,praval pisti
+arthritis,12,female,LOW,akik pishti
+arthritis,12,female,HIGH,jahar mohra pishti
+migraine,12,male,LOW,Mudgaparni
+migraine,12,male,NORMAL,Jyotishmati
+migraine,12,male,HIGH,Vasant Kusumakar Ras
+migraine,12,female,LOW,Mudgaparni
+migraine,12,female,NORMAL,Jyotishmati
+migraine,12,female,HIGH,Vasant Kusumakar Ras
+diarrhea,12,male,HIGH,tribhuvan kirti rasa
+diarrhea,12,male,NORMAL,mrutyunjay rasa
+diarrhea,12,male,LOW,sanjivani vati
+diarrhea,12,female,HIGH,tribhuvan kirti rasa
+diarrhea,12,female,NORMAL,mrutyunjay rasa
+diarrhea,12,female,LOW,sanjivani vati
+gastritis,13,male,HIGH,hingvastak churna
+gastritis,13,male,NORMAL,shivakshar pachan churna
+gastritis,13,male,LOW,lavan bhasker churna
+gastritis,13,female,HIGH,hingvastak churna
+gastritis,13,female,NORMAL,shivakshar pachan churna
+gastritis,13,female,LOW,lavan bhasker churna
+arthritis,13,male,NORMAL,praval pisti
+arthritis,13,male,LOW,akik pishti
+arthritis,13,male,HIGH,jahar mohra pishti
+arthritis,13,female,NORMAL,praval pisti
+arthritis,13,female,LOW,akik pishti
+arthritis,13,female,HIGH,jahar mohra pishti
+migraine,13,male,LOW,Mudgaparni
+migraine,13,male,NORMAL,Jyotishmati
+migraine,13,male,HIGH,Vasant Kusumakar Ras
+migraine,13,female,LOW,Mudgaparni
+migraine,13,female,NORMAL,Jyotishmati
+migraine,13,female,HIGH,Vasant Kusumakar Ras
+diarrhea,13,male,HIGH,tribhuvan kirti rasa
+diarrhea,13,male,NORMAL,mrutyunjay rasa
+diarrhea,13,male,LOW,sanjivani vati
+diarrhea,13,female,HIGH,tribhuvan kirti rasa
+diarrhea,13,female,NORMAL,mrutyunjay rasa
+diarrhea,13,female,LOW,sanjivani vati
+gastritis,14,male,HIGH,hingvastak churna
+gastritis,14,male,NORMAL,shivakshar pachan churna
+gastritis,14,male,LOW,lavan bhasker churna
+gastritis,14,female,HIGH,hingvastak churna
+gastritis,14,female,NORMAL,shivakshar pachan churna
+gastritis,14,female,LOW,lavan bhasker churna
+arthritis,14,male,NORMAL,praval pisti
+arthritis,14,male,LOW,akik pishti
+arthritis,14,male,HIGH,jahar mohra pishti
+arthritis,14,female,NORMAL,praval pisti
+arthritis,14,female,LOW,akik pishti
+arthritis,14,female,HIGH,jahar mohra pishti
+migraine,14,male,LOW,Mudgaparni
+migraine,14,male,NORMAL,Jyotishmati
+migraine,14,male,HIGH,Vasant Kusumakar Ras
+migraine,14,female,LOW,Mudgaparni
+migraine,14,female,NORMAL,Jyotishmati
+migraine,14,female,HIGH,Vasant Kusumakar Ras
+diarrhea,14,male,HIGH,tribhuvan kirti rasa
+diarrhea,14,male,NORMAL,mrutyunjay rasa
+diarrhea,14,male,LOW,sanjivani vati
+diarrhea,14,female,HIGH,tribhuvan kirti rasa
+diarrhea,14,female,NORMAL,mrutyunjay rasa
+diarrhea,14,female,LOW,sanjivani vati
+gastritis,15,male,HIGH,indukantham kashayam
+gastritis,15,male,NORMAL,gulachyadi kashayam
+gastritis,15,male,LOW,trikatu churna
+gastritis,15,female,HIGH,indukantham kashayam
+gastritis,15,female,NORMAL,gulachyadi kashayam
+gastritis,15,female,LOW,trikatu churna
+arthritis,15,male,NORMAL,praval pisti
+arthritis,15,male,LOW,akik pishti
+arthritis,15,male,HIGH,jahar mohra pishti
+arthritis,15,female,NORMAL,praval pisti
+arthritis,15,female,LOW,akik pishti
+arthritis,15,female,HIGH,jahar mohra pishti
+migraine,15,male,LOW,Mudgaparni
+migraine,15,male,NORMAL,Jyotishmati
+migraine,15,male,HIGH,Vasant Kusumakar Ras
+migraine,15,female,LOW,Mudgaparni
+migraine,15,female,NORMAL,Jyotishmati
+migraine,15,female,HIGH,Vasant Kusumakar Ras
+diarrhea,15,male,HIGH,tribhuvan kirti rasa
+diarrhea,15,male,NORMAL,mrutyunjay rasa
+diarrhea,15,male,LOW,sanjivani vati
+diarrhea,15,female,HIGH,tribhuvan kirti rasa
+diarrhea,15,female,NORMAL,mrutyunjay rasa
+diarrhea,15,female,LOW,sanjivani vati
+gastritis,16,male,HIGH,indukantham kashayam
+gastritis,16,male,NORMAL,gulachyadi kashayam
+gastritis,16,male,LOW,trikatu churna
+gastritis,16,female,HIGH,indukantham kashayam
+gastritis,16,female,NORMAL,gulachyadi kashayam
+gastritis,16,female,LOW,trikatu churna
+arthritis,16,male,NORMAL,praval pisti
+arthritis,16,male,LOW,akik pishti
+arthritis,16,male,HIGH,jahar mohra pishti
+arthritis,16,female,NORMAL,praval pisti
+arthritis,16,female,LOW,akik pishti
+arthritis,16,female,HIGH,jahar mohra pishti
+migraine,16,male,LOW,Mudgaparni
+migraine,16,male,NORMAL,Jyotishmati
+migraine,16,male,HIGH,Vasant Kusumakar Ras
+migraine,16,female,LOW,Mudgaparni
+migraine,16,female,NORMAL,Jyotishmati
+migraine,16,female,HIGH,Vasant Kusumakar Ras
+diarrhea,16,male,HIGH,tribhuvan kirti rasa
+diarrhea,16,male,NORMAL,mrutyunjay rasa
+diarrhea,16,male,LOW,sanjivani vati
+diarrhea,16,female,HIGH,tribhuvan kirti rasa
+diarrhea,16,female,NORMAL,mrutyunjay rasa
+diarrhea,16,female,LOW,sanjivani vati
+gastritis,17,male,HIGH,indukantham kashayam
+gastritis,17,male,NORMAL,gulachyadi kashayam
+gastritis,17,male,LOW,trikatu churna
+gastritis,17,female,HIGH,indukantham kashayam
+gastritis,17,female,NORMAL,gulachyadi kashayam
+gastritis,17,female,LOW,trikatu churna
+arthritis,17,male,NORMAL,praval pisti
+arthritis,17,male,LOW,akik pishti
+arthritis,17,male,HIGH,jahar mohra pishti
+arthritis,17,female,NORMAL,praval pisti
+arthritis,17,female,LOW,akik pishti
+arthritis,17,female,HIGH,jahar mohra pishti
+migraine,17,male,LOW,Mudgaparni
+migraine,17,male,NORMAL,Jyotishmati
+migraine,17,male,HIGH,Vasant Kusumakar Ras
+migraine,17,female,LOW,Mudgaparni
+migraine,17,female,NORMAL,Jyotishmati
+migraine,17,female,HIGH,Vasant Kusumakar Ras
+diarrhea,17,male,HIGH,tribhuvan kirti rasa
+diarrhea,17,male,NORMAL,mrutyunjay rasa
+diarrhea,17,male,LOW,sanjivani vati
+diarrhea,17,female,HIGH,tribhuvan kirti rasa
+diarrhea,17,female,NORMAL,mrutyunjay rasa
+diarrhea,17,female,LOW,sanjivani vati
+gastritis,18,male,HIGH,indukantham kashayam
+gastritis,18,male,NORMAL,gulachyadi kashayam
+gastritis,18,male,LOW,trikatu churna
+gastritis,18,female,HIGH,indukantham kashayam
+gastritis,18,female,NORMAL,gulachyadi kashayam
+gastritis,18,female,LOW,trikatu churna
+arthritis,18,male,NORMAL,praval pisti
+arthritis,18,male,LOW,akik pishti
+arthritis,18,male,HIGH,jahar mohra pishti
+arthritis,18,female,NORMAL,praval pisti
+arthritis,18,female,LOW,akik pishti
+arthritis,18,female,HIGH,jahar mohra pishti
+migraine,18,male,LOW,Mudgaparni
+migraine,18,male,NORMAL,Jyotishmati
+migraine,18,male,HIGH,Vasant Kusumakar Ras
+migraine,18,female,LOW,Mudgaparni
+migraine,18,female,NORMAL,Jyotishmati
+migraine,18,female,HIGH,Vasant Kusumakar Ras
+diarrhea,18,male,HIGH,tribhuvan kirti rasa
+diarrhea,18,male,NORMAL,mrutyunjay rasa
+diarrhea,18,male,LOW,sanjivani vati
+diarrhea,18,female,HIGH,tribhuvan kirti rasa
+diarrhea,18,female,NORMAL,mrutyunjay rasa
+diarrhea,18,female,LOW,sanjivani vati
+gastritis,19,male,HIGH,indukantham kashayam
+gastritis,19,male,NORMAL,gulachyadi kashayam
+gastritis,19,male,LOW,trikatu churna
+gastritis,19,female,HIGH,indukantham kashayam
+gastritis,19,female,NORMAL,gulachyadi kashayam
+gastritis,19,female,LOW,trikatu churna
+arthritis,19,male,NORMAL,kamdhudha ras
+arthritis,19,male,LOW,mukta pishti
+arthritis,19,male,HIGH,giloy satya
+arthritis,19,female,NORMAL,kamdhudha ras
+arthritis,19,female,LOW,mukta pishti
+arthritis,19,female,HIGH,giloy satya
+migraine,19,male,LOW,Mukta pishti
+migraine,19,male,NORMAL,Chandraprabha vati
+migraine,19,male,HIGH,Shankha prakshalana
+migraine,19,female,LOW,Mukta pishti
+migraine,19,female,NORMAL,Chandraprabha vati
+migraine,19,female,HIGH,Shankha prakshalana
+diarrhea,19,male,HIGH,tribhuvan kirti rasa
+diarrhea,19,male,NORMAL,mrutyunjay rasa
+diarrhea,19,male,LOW,sanjivani vati
+diarrhea,19,female,HIGH,tribhuvan kirti rasa
+diarrhea,19,female,NORMAL,mrutyunjay rasa
+diarrhea,19,female,LOW,sanjivani vati
+gastritis,20,male,HIGH,indukantham kashayam
+gastritis,20,male,NORMAL,gulachyadi kashayam
+gastritis,20,male,LOW,trikatu churna
+gastritis,20,female,HIGH,indukantham kashayam
+gastritis,20,female,NORMAL,gulachyadi kashayam
+gastritis,20,female,LOW,trikatu churna
+arthritis,20,male,NORMAL,kamdhudha ras
+arthritis,20,male,LOW,mukta pishti
+arthritis,20,male,HIGH,giloy satya
+arthritis,20,female,NORMAL,kamdhudha ras
+arthritis,20,female,LOW,mukta pishti
+arthritis,20,female,HIGH,giloy satya
+migraine,20,male,LOW,Mukta pishti
+migraine,20,male,NORMAL,Chandraprabha vati
+migraine,20,male,HIGH,Shankha prakshalana
+migraine,20,female,LOW,Mukta pishti
+migraine,20,female,NORMAL,Chandraprabha vati
+migraine,20,female,HIGH,Shankha prakshalana
+diarrhea,20,male,HIGH,tribhuvan kirti rasa
+diarrhea,20,male,NORMAL,mrutyunjay rasa
+diarrhea,20,male,LOW,sanjivani vati
+diarrhea,20,female,HIGH,tribhuvan kirti rasa
+diarrhea,20,female,NORMAL,mrutyunjay rasa
+diarrhea,20,female,LOW,sanjivani vati
+gastritis,21,male,HIGH,panchkol churna
+gastritis,21,male,NORMAL,ashta choornam
+gastritis,21,male,LOW,phadke
+gastritis,21,female,HIGH,panchkol churna
+gastritis,21,female,NORMAL,ashta choornam
+gastritis,21,female,LOW,phadke
+arthritis,21,male,NORMAL,kamdhudha ras
+arthritis,21,male,LOW,mukta pishti
+arthritis,21,male,HIGH,giloy satya
+arthritis,21,female,NORMAL,kamdhudha ras
+arthritis,21,female,LOW,mukta pishti
+arthritis,21,female,HIGH,giloy satya
+migraine,21,male,LOW,Mukta pishti
+migraine,21,male,NORMAL,Chandraprabha vati
+migraine,21,male,HIGH,Shankha prakshalana
+migraine,21,female,LOW,Mukta pishti
+migraine,21,female,NORMAL,Chandraprabha vati
+migraine,21,female,HIGH,Shankha prakshalana
+diarrhea,21,male,HIGH,sitopaladi churna
+diarrhea,21,male,NORMAL,kutajarishta
+diarrhea,21,male,LOW,fenugreek seed
+diarrhea,21,female,HIGH,sitopaladi churna
+diarrhea,21,female,NORMAL,kutajarishta
+diarrhea,21,female,LOW,fenugreek seed
+gastritis,22,male,HIGH,panchkol churna
+gastritis,22,male,NORMAL,ashta choornam
+gastritis,22,male,LOW,phadke
+gastritis,22,female,HIGH,panchkol churna
+gastritis,22,female,NORMAL,ashta choornam
+gastritis,22,female,LOW,phadke
+arthritis,22,male,NORMAL,kamdhudha ras
+arthritis,22,male,LOW,mukta pishti
+arthritis,22,male,HIGH,giloy satya
+arthritis,22,female,NORMAL,kamdhudha ras
+arthritis,22,female,LOW,mukta pishti
+arthritis,22,female,HIGH,giloy satya
+migraine,22,male,LOW,Mukta pishti
+migraine,22,male,NORMAL,Chandraprabha vati
+migraine,22,male,HIGH,Shankha prakshalana
+migraine,22,female,LOW,Mukta pishti
+migraine,22,female,NORMAL,Chandraprabha vati
+migraine,22,female,HIGH,Shankha prakshalana
+diarrhea,22,male,HIGH,sitopaladi churna
+diarrhea,22,male,NORMAL,kutajarishta
+diarrhea,22,male,LOW,fenugreek seed
+diarrhea,22,female,HIGH,sitopaladi churna
+diarrhea,22,female,NORMAL,kutajarishta
+diarrhea,22,female,LOW,fenugreek seed
+gastritis,23,male,HIGH,panchkol churna
+gastritis,23,male,NORMAL,ashta choornam
+gastritis,23,male,LOW,phadke
+gastritis,23,female,HIGH,panchkol churna
+gastritis,23,female,NORMAL,ashta choornam
+gastritis,23,female,LOW,phadke
+arthritis,23,male,NORMAL,kamdhudha ras
+arthritis,23,male,LOW,mukta pishti
+arthritis,23,male,HIGH,giloy satya
+arthritis,23,female,NORMAL,kamdhudha ras
+arthritis,23,female,LOW,mukta pishti
+arthritis,23,female,HIGH,giloy satya
+migraine,23,male,LOW,Mukta pishti
+migraine,23,male,NORMAL,Chandraprabha vati
+migraine,23,male,HIGH,Shankha prakshalana
+migraine,23,female,LOW,Mukta pishti
+migraine,23,female,NORMAL,Chandraprabha vati
+migraine,23,female,HIGH,Shankha prakshalana
+diarrhea,23,male,HIGH,sitopaladi churna
+diarrhea,23,male,NORMAL,kutajarishta
+diarrhea,23,male,LOW,fenugreek seed
+diarrhea,23,female,HIGH,sitopaladi churna
+diarrhea,23,female,NORMAL,kutajarishta
+diarrhea,23,female,LOW,fenugreek seed
+gastritis,24,male,HIGH,panchkol churna
+gastritis,24,male,NORMAL,ashta choornam
+gastritis,24,male,LOW,phadke
+gastritis,24,female,HIGH,panchkol churna
+gastritis,24,female,NORMAL,ashta choornam
+gastritis,24,female,LOW,phadke
+arthritis,24,male,NORMAL,kamdhudha ras
+arthritis,24,male,LOW,mukta pishti
+arthritis,24,male,HIGH,giloy satya
+arthritis,24,female,NORMAL,kamdhudha ras
+arthritis,24,female,LOW,mukta pishti
+arthritis,24,female,HIGH,giloy satya
+migraine,24,male,LOW,Mukta pishti
+migraine,24,male,NORMAL,Chandraprabha vati
+migraine,24,male,HIGH,Shankha prakshalana
+migraine,24,female,LOW,Mukta pishti
+migraine,24,female,NORMAL,Chandraprabha vati
+migraine,24,female,HIGH,Shankha prakshalana
+diarrhea,24,male,HIGH,sitopaladi churna
+diarrhea,24,male,NORMAL,kutajarishta
+diarrhea,24,male,LOW,fenugreek seed
+diarrhea,24,female,HIGH,sitopaladi churna
+diarrhea,24,female,NORMAL,kutajarishta
+diarrhea,24,female,LOW,fenugreek seed
+gastritis,25,male,HIGH,panchkol churna
+gastritis,25,male,NORMAL,ashta choornam
+gastritis,25,male,LOW,phadke
+gastritis,25,female,HIGH,panchkol churna
+gastritis,25,female,NORMAL,ashta choornam
+gastritis,25,female,LOW,phadke
+arthritis,25,male,NORMAL,kamdhudha ras
+arthritis,25,male,LOW,mukta pishti
+arthritis,25,male,HIGH,giloy satya
+arthritis,25,female,NORMAL,kamdhudha ras
+arthritis,25,female,LOW,mukta pishti
+arthritis,25,female,HIGH,giloy satya
+migraine,25,male,LOW,Mukta pishti
+migraine,25,male,NORMAL,Chandraprabha vati
+migraine,25,male,HIGH,Shankha prakshalana
+migraine,25,female,LOW,Mukta pishti
+migraine,25,female,NORMAL,Chandraprabha vati
+migraine,25,female,HIGH,Shankha prakshalana
+diarrhea,25,male,HIGH,sitopaladi churna
+diarrhea,25,male,NORMAL,kutajarishta
+diarrhea,25,male,LOW,fenugreek seed
+diarrhea,25,female,HIGH,sitopaladi churna
+diarrhea,25,female,NORMAL,kutajarishta
+diarrhea,25,female,LOW,fenugreek seed
+gastritis,26,male,HIGH,panchkol churna
+gastritis,26,male,NORMAL,ashta choornam
+gastritis,26,male,LOW,phadke
+gastritis,26,female,HIGH,panchkol churna
+gastritis,26,female,NORMAL,ashta choornam
+gastritis,26,female,LOW,phadke
+arthritis,26,male,NORMAL,kamdhudha ras
+arthritis,26,male,LOW,mukta pishti
+arthritis,26,male,HIGH,giloy satya
+arthritis,26,female,NORMAL,kamdhudha ras
+arthritis,26,female,LOW,mukta pishti
+arthritis,26,female,HIGH,giloy satya
+migraine,26,male,LOW,Mukta pishti
+migraine,26,male,NORMAL,Chandraprabha vati
+migraine,26,male,HIGH,Shankha prakshalana
+migraine,26,female,LOW,Mukta pishti
+migraine,26,female,NORMAL,Chandraprabha vati
+migraine,26,female,HIGH,Shankha prakshalana
+diarrhea,26,male,HIGH,sitopaladi churna
+diarrhea,26,male,NORMAL,kutajarishta
+diarrhea,26,male,LOW,fenugreek seed
+diarrhea,26,female,HIGH,sitopaladi churna
+diarrhea,26,female,NORMAL,kutajarishta
+diarrhea,26,female,LOW,fenugreek seed
+gastritis,27,male,HIGH,panchkol churna
+gastritis,27,male,NORMAL,ashta choornam
+gastritis,27,male,LOW,phadke
+gastritis,27,female,HIGH,panchkol churna
+gastritis,27,female,NORMAL,ashta choornam
+gastritis,27,female,LOW,phadke
+arthritis,27,male,NORMAL,kamdhudha ras
+arthritis,27,male,LOW,mukta pishti
+arthritis,27,male,HIGH,giloy satya
+arthritis,27,female,NORMAL,kamdhudha ras
+arthritis,27,female,LOW,mukta pishti
+arthritis,27,female,HIGH,giloy satya
+migraine,27,male,LOW,Mukta pishti
+migraine,27,male,NORMAL,Chandraprabha vati
+migraine,27,male,HIGH,Shankha prakshalana
+migraine,27,female,LOW,Mukta pishti
+migraine,27,female,NORMAL,Chandraprabha vati
+migraine,27,female,HIGH,Shankha prakshalana
+diarrhea,27,male,HIGH,sitopaladi churna
+diarrhea,27,male,NORMAL,kutajarishta
+diarrhea,27,male,LOW,fenugreek seed
+diarrhea,27,female,HIGH,sitopaladi churna
+diarrhea,27,female,NORMAL,kutajarishta
+diarrhea,27,female,LOW,fenugreek seed
+gastritis,28,male,HIGH,panchkol churna
+gastritis,28,male,NORMAL,ashta choornam
+gastritis,28,male,LOW,phadke
+gastritis,28,female,HIGH,panchkol churna
+gastritis,28,female,NORMAL,ashta choornam
+gastritis,28,female,LOW,phadke
+arthritis,28,male,NORMAL,kamdhudha ras
+arthritis,28,male,LOW,mukta pishti
+arthritis,28,male,HIGH,giloy satya
+arthritis,28,female,NORMAL,kamdhudha ras
+arthritis,28,female,LOW,mukta pishti
+arthritis,28,female,HIGH,giloy satya
+migraine,28,male,LOW,Mukta pishti
+migraine,28,male,NORMAL,Chandraprabha vati
+migraine,28,male,HIGH,Shankha prakshalana
+migraine,28,female,LOW,Mukta pishti
+migraine,28,female,NORMAL,Chandraprabha vati
+migraine,28,female,HIGH,Shankha prakshalana
+diarrhea,28,male,HIGH,sitopaladi churna
+diarrhea,28,male,NORMAL,kutajarishta
+diarrhea,28,male,LOW,fenugreek seed
+diarrhea,28,female,HIGH,sitopaladi churna
+diarrhea,28,female,NORMAL,kutajarishta
+diarrhea,28,female,LOW,fenugreek seed
+gastritis,29,male,HIGH,panchkol churna
+gastritis,29,male,NORMAL,ashta choornam
+gastritis,29,male,LOW,phadke
+gastritis,29,female,HIGH,panchkol churna
+gastritis,29,female,NORMAL,ashta choornam
+gastritis,29,female,LOW,phadke
+arthritis,29,male,NORMAL,kamdhudha ras
+arthritis,29,male,LOW,mukta pishti
+arthritis,29,male,HIGH,giloy satya
+arthritis,29,female,NORMAL,kamdhudha ras
+arthritis,29,female,LOW,mukta pishti
+arthritis,29,female,HIGH,giloy satya
+migraine,29,male,LOW,Mukta pishti
+migraine,29,male,NORMAL,Chandraprabha vati
+migraine,29,male,HIGH,Shankha prakshalana
+migraine,29,female,LOW,Mukta pishti
+migraine,29,female,NORMAL,Chandraprabha vati
+migraine,29,female,HIGH,Shankha prakshalana
+diarrhea,29,male,HIGH,sitopaladi churna
+diarrhea,29,male,NORMAL,kutajarishta
+diarrhea,29,male,LOW,fenugreek seed
+diarrhea,29,female,HIGH,sitopaladi churna
+diarrhea,29,female,NORMAL,kutajarishta
+diarrhea,29,female,LOW,fenugreek seed
+gastritis,30,male,HIGH,panchkol churna
+gastritis,30,male,NORMAL,ashta choornam
+gastritis,30,male,LOW,phadke
+gastritis,30,female,HIGH,panchkol churna
+gastritis,30,female,NORMAL,ashta choornam
+gastritis,30,female,LOW,phadke
+arthritis,30,male,NORMAL,kamdhudha ras
+arthritis,30,male,LOW,mukta pishti
+arthritis,30,male,HIGH,giloy satya
+arthritis,30,female,NORMAL,kamdhudha ras
+arthritis,30,female,LOW,mukta pishti
+arthritis,30,female,HIGH,giloy satya
+migraine,30,male,LOW,Mukta pishti
+migraine,30,male,NORMAL,Chandraprabha vati
+migraine,30,male,HIGH,Shankha prakshalana
+migraine,30,female,LOW,Mukta pishti
+migraine,30,female,NORMAL,Chandraprabha vati
+migraine,30,female,HIGH,Shankha prakshalana
+diarrhea,30,male,HIGH,sitopaladi churna
+diarrhea,30,male,NORMAL,kutajarishta
+diarrhea,30,male,LOW,fenugreek seed
+diarrhea,30,female,HIGH,sitopaladi churna
+diarrhea,30,female,NORMAL,kutajarishta
+diarrhea,30,female,LOW,fenugreek seed
+gastritis,31,male,HIGH,panchkol churna
+gastritis,31,male,NORMAL,ashta choornam
+gastritis,31,male,LOW,phadke
+gastritis,31,female,HIGH,panchkol churna
+gastritis,31,female,NORMAL,ashta choornam
+gastritis,31,female,LOW,phadke
+arthritis,31,male,NORMAL,kamdhudha ras
+arthritis,31,male,LOW,mukta pishti
+arthritis,31,male,HIGH,giloy satya
+arthritis,31,female,NORMAL,kamdhudha ras
+arthritis,31,female,LOW,mukta pishti
+arthritis,31,female,HIGH,giloy satya
+migraine,31,male,LOW,Mukta pishti
+migraine,31,male,NORMAL,Chandraprabha vati
+migraine,31,male,HIGH,Shankha prakshalana
+migraine,31,female,LOW,Mukta pishti
+migraine,31,female,NORMAL,Chandraprabha vati
+migraine,31,female,HIGH,Shankha prakshalana
+diarrhea,31,male,HIGH,sitopaladi churna
+diarrhea,31,male,NORMAL,kutajarishta
+diarrhea,31,male,LOW,fenugreek seed
+diarrhea,31,female,HIGH,sitopaladi churna
+diarrhea,31,female,NORMAL,kutajarishta
+diarrhea,31,female,LOW,fenugreek seed
+gastritis,32,male,HIGH,panchkol churna
+gastritis,32,male,NORMAL,ashta choornam
+gastritis,32,male,LOW,phadke
+gastritis,32,female,HIGH,panchkol churna
+gastritis,32,female,NORMAL,ashta choornam
+gastritis,32,female,LOW,phadke
+arthritis,32,male,NORMAL,kamdhudha ras
+arthritis,32,male,LOW,mukta pishti
+arthritis,32,male,HIGH,giloy satya
+arthritis,32,female,NORMAL,kamdhudha ras
+arthritis,32,female,LOW,mukta pishti
+arthritis,32,female,HIGH,giloy satya
+migraine,32,male,LOW,Mukta pishti
+migraine,32,male,NORMAL,Chandraprabha vati
+migraine,32,male,HIGH,Shankha prakshalana
+migraine,32,female,LOW,Mukta pishti
+migraine,32,female,NORMAL,Chandraprabha vati
+migraine,32,female,HIGH,Shankha prakshalana
+diarrhea,32,male,HIGH,sitopaladi churna
+diarrhea,32,male,NORMAL,kutajarishta
+diarrhea,32,male,LOW,ajamodarka
+diarrhea,32,female,HIGH,sitopaladi churna
+diarrhea,32,female,NORMAL,kutajarishta
+diarrhea,32,female,LOW,ajamodarka
+gastritis,33,male,HIGH,panchkol churna
+gastritis,33,male,NORMAL,ashta choornam
+gastritis,33,male,LOW,phadke
+gastritis,33,female,HIGH,panchkol churna
+gastritis,33,female,NORMAL,ashta choornam
+gastritis,33,female,LOW,phadke
+arthritis,33,male,NORMAL,kamdhudha ras
+arthritis,33,male,LOW,mukta pishti
+arthritis,33,male,HIGH,giloy satya
+arthritis,33,female,NORMAL,kamdhudha ras
+arthritis,33,female,LOW,mukta pishti
+arthritis,33,female,HIGH,giloy satya
+migraine,33,male,LOW,Mukta pishti
+migraine,33,male,NORMAL,Chandraprabha vati
+migraine,33,male,HIGH,Shankha prakshalana
+migraine,33,female,LOW,Mukta pishti
+migraine,33,female,NORMAL,Chandraprabha vati
+migraine,33,female,HIGH,Shankha prakshalana
+diarrhea,33,male,HIGH,sitopaladi churna
+diarrhea,33,male,NORMAL,kutajarishta
+diarrhea,33,male,LOW,ajamodarka
+diarrhea,33,female,HIGH,sitopaladi churna
+diarrhea,33,female,NORMAL,kutajarishta
+diarrhea,33,female,LOW,ajamodarka
+gastritis,34,male,HIGH,panchkol churna
+gastritis,34,male,NORMAL,ashta choornam
+gastritis,34,male,LOW,phadke
+gastritis,34,female,HIGH,panchkol churna
+gastritis,34,female,NORMAL,ashta choornam
+gastritis,34,female,LOW,phadke
+arthritis,34,male,NORMAL,kamdhudha ras
+arthritis,34,male,LOW,mukta pishti
+arthritis,34,male,HIGH,giloy satya
+arthritis,34,female,NORMAL,kamdhudha ras
+arthritis,34,female,LOW,mukta pishti
+arthritis,34,female,HIGH,giloy satya
+migraine,34,male,LOW,Mukta pishti
+migraine,34,male,NORMAL,Chandraprabha vati
+migraine,34,male,HIGH,Shankha prakshalana
+migraine,34,female,LOW,Mukta pishti
+migraine,34,female,NORMAL,Chandraprabha vati
+migraine,34,female,HIGH,Shankha prakshalana
+diarrhea,34,male,HIGH,sitopaladi churna
+diarrhea,34,male,NORMAL,kutajarishta
+diarrhea,34,male,LOW,ajamodarka
+diarrhea,34,female,HIGH,sitopaladi churna
+diarrhea,34,female,NORMAL,kutajarishta
+diarrhea,34,female,LOW,ajamodarka
+gastritis,35,male,HIGH,panchkol churna
+gastritis,35,male,NORMAL,ashta choornam
+gastritis,35,male,LOW,phadke
+gastritis,35,female,HIGH,panchkol churna
+gastritis,35,female,NORMAL,ashta choornam
+gastritis,35,female,LOW,phadke
+arthritis,35,male,NORMAL,kamdhudha ras
+arthritis,35,male,LOW,mukta pishti
+arthritis,35,male,HIGH,giloy satya
+arthritis,35,female,NORMAL,kamdhudha ras
+arthritis,35,female,LOW,mukta pishti
+arthritis,35,female,HIGH,giloy satya
+migraine,35,male,LOW,Mukta pishti
+migraine,35,male,NORMAL,Chandraprabha vati
+migraine,35,male,HIGH,Shankha prakshalana
+migraine,35,female,LOW,Mukta pishti
+migraine,35,female,NORMAL,Chandraprabha vati
+migraine,35,female,HIGH,Shankha prakshalana
+diarrhea,35,male,HIGH,sitopaladi churna
+diarrhea,35,male,NORMAL,kutajarishta
+diarrhea,35,male,LOW,ajamodarka
+diarrhea,35,female,HIGH,sitopaladi churna
+diarrhea,35,female,NORMAL,kutajarishta
+diarrhea,35,female,LOW,ajamodarka
+gastritis,36,male,HIGH,panchkol churna
+gastritis,36,male,NORMAL,ashta choornam
+gastritis,36,male,LOW,phadke
+gastritis,36,female,HIGH,panchkol churna
+gastritis,36,female,NORMAL,ashta choornam
+gastritis,36,female,LOW,phadke
+arthritis,36,male,NORMAL,kamdhudha ras
+arthritis,36,male,LOW,mukta pishti
+arthritis,36,male,HIGH,giloy satya
+arthritis,36,female,NORMAL,kamdhudha ras
+arthritis,36,female,LOW,mukta pishti
+arthritis,36,female,HIGH,giloy satya
+migraine,36,male,LOW,Mukta pishti
+migraine,36,male,NORMAL,Chandraprabha vati
+migraine,36,male,HIGH,Shankha prakshalana
+migraine,36,female,LOW,Mukta pishti
+migraine,36,female,NORMAL,Chandraprabha vati
+migraine,36,female,HIGH,Shankha prakshalana
+diarrhea,36,male,HIGH,sitopaladi churna
+diarrhea,36,male,NORMAL,kutajarishta
+diarrhea,36,male,LOW,ajamodarka
+diarrhea,36,female,HIGH,sitopaladi churna
+diarrhea,36,female,NORMAL,kutajarishta
+diarrhea,36,female,LOW,ajamodarka
+gastritis,37,male,HIGH,panchkol churna
+gastritis,37,male,NORMAL,ashta choornam
+gastritis,37,male,LOW,phadke
+gastritis,37,female,HIGH,panchkol churna
+gastritis,37,female,NORMAL,ashta choornam
+gastritis,37,female,LOW,phadke
+arthritis,37,male,NORMAL,kamdhudha ras
+arthritis,37,male,LOW,mukta pishti
+arthritis,37,male,HIGH,giloy satya
+arthritis,37,female,NORMAL,kamdhudha ras
+arthritis,37,female,LOW,mukta pishti
+arthritis,37,female,HIGH,giloy satya
+migraine,37,male,LOW,Mukta pishti
+migraine,37,male,NORMAL,Chandraprabha vati
+migraine,37,male,HIGH,Shankha prakshalana
+migraine,37,female,LOW,Mukta pishti
+migraine,37,female,NORMAL,Chandraprabha vati
+migraine,37,female,HIGH,Shankha prakshalana
+diarrhea,37,male,HIGH,sitopaladi churna
+diarrhea,37,male,NORMAL,kutajarishta
+diarrhea,37,male,LOW,ajamodarka
+diarrhea,37,female,HIGH,sitopaladi churna
+diarrhea,37,female,NORMAL,kutajarishta
+diarrhea,37,female,LOW,ajamodarka
+gastritis,38,male,HIGH,panchkol churna
+gastritis,38,male,NORMAL,ashta choornam
+gastritis,38,male,LOW,phadke
+gastritis,38,female,HIGH,panchkol churna
+gastritis,38,female,NORMAL,ashta choornam
+gastritis,38,female,LOW,phadke
+arthritis,38,male,NORMAL,kamdhudha ras
+arthritis,38,male,LOW,mukta pishti
+arthritis,38,male,HIGH,giloy satya
+arthritis,38,female,NORMAL,kamdhudha ras
+arthritis,38,female,LOW,mukta pishti
+arthritis,38,female,HIGH,giloy satya
+migraine,38,male,LOW,Mukta pishti
+migraine,38,male,NORMAL,Chandraprabha vati
+migraine,38,male,HIGH,Shankha prakshalana
+migraine,38,female,LOW,Mukta pishti
+migraine,38,female,NORMAL,Chandraprabha vati
+migraine,38,female,HIGH,Shankha prakshalana
+diarrhea,38,male,HIGH,sitopaladi churna
+diarrhea,38,male,NORMAL,kutajarishta
+diarrhea,38,male,LOW,ajamodarka
+diarrhea,38,female,HIGH,sitopaladi churna
+diarrhea,38,female,NORMAL,kutajarishta
+diarrhea,38,female,LOW,ajamodarka
+gastritis,39,male,HIGH,panchkol churna
+gastritis,39,male,NORMAL,ashta choornam
+gastritis,39,male,LOW,phadke
+gastritis,39,female,HIGH,panchkol churna
+gastritis,39,female,NORMAL,ashta choornam
+gastritis,39,female,LOW,phadke
+arthritis,39,male,NORMAL,kamdhudha ras
+arthritis,39,male,LOW,mukta pishti
+arthritis,39,male,HIGH,giloy satya
+arthritis,39,female,NORMAL,kamdhudha ras
+arthritis,39,female,LOW,mukta pishti
+arthritis,39,female,HIGH,giloy satya
+migraine,39,male,LOW,Mukta pishti
+migraine,39,male,NORMAL,Chandraprabha vati
+migraine,39,male,HIGH,Shankha prakshalana
+migraine,39,female,LOW,Mukta pishti
+migraine,39,female,NORMAL,Chandraprabha vati
+migraine,39,female,HIGH,Shankha prakshalana
+diarrhea,39,male,HIGH,sitopaladi churna
+diarrhea,39,male,NORMAL,kutajarishta
+diarrhea,39,male,LOW,ajamodarka
+diarrhea,39,female,HIGH,sitopaladi churna
+diarrhea,39,female,NORMAL,kutajarishta
+diarrhea,39,female,LOW,ajamodarka
+gastritis,40,male,HIGH,panchkol churna
+gastritis,40,male,NORMAL,ashta choornam
+gastritis,40,male,LOW,phadke
+gastritis,40,female,HIGH,panchkol churna
+gastritis,40,female,NORMAL,ashta choornam
+gastritis,40,female,LOW,phadke
+arthritis,40,male,NORMAL,kamdhudha ras
+arthritis,40,male,LOW,mukta pishti
+arthritis,40,male,HIGH,giloy satya
+arthritis,40,female,NORMAL,kamdhudha ras
+arthritis,40,female,LOW,mukta pishti
+arthritis,40,female,HIGH,giloy satya
+migraine,40,male,LOW,Mukta pishti
+migraine,40,male,NORMAL,Chandraprabha vati
+migraine,40,male,HIGH,Shankha prakshalana
+migraine,40,female,LOW,Mukta pishti
+migraine,40,female,NORMAL,Chandraprabha vati
+migraine,40,female,HIGH,Shankha prakshalana
+diarrhea,40,male,HIGH,sitopaladi churna
+diarrhea,40,male,NORMAL,kutajarishta
+diarrhea,40,male,LOW,ajamodarka
+diarrhea,40,female,HIGH,sitopaladi churna
+diarrhea,40,female,NORMAL,kutajarishta
+diarrhea,40,female,LOW,ajamodarka
+gastritis,41,male,HIGH,trikatu churna
+gastritis,41,male,NORMAL,panchkol churna
+gastritis,41,male,LOW,ashta choornam
+gastritis,41,female,HIGH,trikatu churna
+gastritis,41,female,NORMAL,panchkol churna
+gastritis,41,female,LOW,ashta choornam
+arthritis,41,male,NORMAL,ricinus communis
+arthritis,41,male,LOW,aamvatantak churna
+arthritis,41,male,HIGH,boswellia curcumin
+arthritis,41,female,NORMAL,ricinus communis
+arthritis,41,female,LOW,aamvatantak churna
+arthritis,41,female,HIGH,boswellia curcumin
+migraine,41,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,41,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,41,male,HIGH,Jatamansi + Shankhapushpi
+migraine,41,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,41,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,41,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,41,male,HIGH,sitopaladi churna
+diarrhea,41,male,NORMAL,kutajarishta
+diarrhea,41,male,LOW,ajamodarka
+diarrhea,41,female,HIGH,sitopaladi churna
+diarrhea,41,female,NORMAL,kutajarishta
+diarrhea,41,female,LOW,ajamodarka
+gastritis,42,male,HIGH,trikatu churna
+gastritis,42,male,NORMAL,panchkol churna
+gastritis,42,male,LOW,ashta choornam
+gastritis,42,female,HIGH,trikatu churna
+gastritis,42,female,NORMAL,panchkol churna
+gastritis,42,female,LOW,ashta choornam
+arthritis,42,male,NORMAL,ricinus communis
+arthritis,42,male,LOW,aamvatantak churna
+arthritis,42,male,HIGH,boswellia curcumin
+arthritis,42,female,NORMAL,ricinus communis
+arthritis,42,female,LOW,aamvatantak churna
+arthritis,42,female,HIGH,boswellia curcumin
+migraine,42,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,42,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,42,male,HIGH,Jatamansi + Shankhapushpi
+migraine,42,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,42,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,42,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,42,male,HIGH,sitopaladi churna
+diarrhea,42,male,NORMAL,kutajarishta
+diarrhea,42,male,LOW,ajamodarka
+diarrhea,42,female,HIGH,sitopaladi churna
+diarrhea,42,female,NORMAL,kutajarishta
+diarrhea,42,female,LOW,ajamodarka
+gastritis,43,male,HIGH,trikatu churna
+gastritis,43,male,NORMAL,panchkol churna
+gastritis,43,male,LOW,ashta choornam
+gastritis,43,female,HIGH,trikatu churna
+gastritis,43,female,NORMAL,panchkol churna
+gastritis,43,female,LOW,ashta choornam
+arthritis,43,male,NORMAL,ricinus communis
+arthritis,43,male,LOW,aamvatantak churna
+arthritis,43,male,HIGH,boswellia curcumin
+arthritis,43,female,NORMAL,ricinus communis
+arthritis,43,female,LOW,aamvatantak churna
+arthritis,43,female,HIGH,boswellia curcumin
+migraine,43,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,43,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,43,male,HIGH,Jatamansi + Shankhapushpi
+migraine,43,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,43,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,43,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,43,male,HIGH,sitopaladi churna
+diarrhea,43,male,NORMAL,kutajarishta
+diarrhea,43,male,LOW,ajamodarka
+diarrhea,43,female,HIGH,sitopaladi churna
+diarrhea,43,female,NORMAL,kutajarishta
+diarrhea,43,female,LOW,ajamodarka
+gastritis,44,male,HIGH,trikatu churna
+gastritis,44,male,NORMAL,panchkol churna
+gastritis,44,male,LOW,ashta choornam
+gastritis,44,female,HIGH,trikatu churna
+gastritis,44,female,NORMAL,panchkol churna
+gastritis,44,female,LOW,ashta choornam
+arthritis,44,male,NORMAL,ricinus communis
+arthritis,44,male,LOW,aamvatantak churna
+arthritis,44,male,HIGH,boswellia curcumin
+arthritis,44,female,NORMAL,ricinus communis
+arthritis,44,female,LOW,aamvatantak churna
+arthritis,44,female,HIGH,boswellia curcumin
+migraine,44,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,44,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,44,male,HIGH,Jatamansi + Shankhapushpi
+migraine,44,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,44,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,44,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,44,male,HIGH,sitopaladi churna
+diarrhea,44,male,NORMAL,kutajarishta
+diarrhea,44,male,LOW,ajamodarka
+diarrhea,44,female,HIGH,sitopaladi churna
+diarrhea,44,female,NORMAL,kutajarishta
+diarrhea,44,female,LOW,ajamodarka
+gastritis,45,male,HIGH,trikatu churna
+gastritis,45,male,NORMAL,panchkol churna
+gastritis,45,male,LOW,ashta choornam
+gastritis,45,female,HIGH,trikatu churna
+gastritis,45,female,NORMAL,panchkol churna
+gastritis,45,female,LOW,ashta choornam
+arthritis,45,male,NORMAL,ricinus communis
+arthritis,45,male,LOW,aamvatantak churna
+arthritis,45,male,HIGH,boswellia curcumin
+arthritis,45,female,NORMAL,ricinus communis
+arthritis,45,female,LOW,aamvatantak churna
+arthritis,45,female,HIGH,boswellia curcumin
+migraine,45,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,45,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,45,male,HIGH,Jatamansi + Shankhapushpi
+migraine,45,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,45,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,45,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,45,male,HIGH,sitopaladi churna
+diarrhea,45,male,NORMAL,kutajarishta
+diarrhea,45,male,LOW,ajamodarka
+diarrhea,45,female,HIGH,sitopaladi churna
+diarrhea,45,female,NORMAL,kutajarishta
+diarrhea,45,female,LOW,ajamodarka
+gastritis,46,male,HIGH,trikatu churna
+gastritis,46,male,NORMAL,panchkol churna
+gastritis,46,male,LOW,ashta choornam
+gastritis,46,female,HIGH,trikatu churna
+gastritis,46,female,NORMAL,panchkol churna
+gastritis,46,female,LOW,ashta choornam
+arthritis,46,male,NORMAL,ricinus communis
+arthritis,46,male,LOW,aamvatantak churna
+arthritis,46,male,HIGH,boswellia curcumin
+arthritis,46,female,NORMAL,ricinus communis
+arthritis,46,female,LOW,aamvatantak churna
+arthritis,46,female,HIGH,boswellia curcumin
+migraine,46,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,46,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,46,male,HIGH,Jatamansi + Shankhapushpi
+migraine,46,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,46,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,46,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,46,male,HIGH,sitopaladi churna
+diarrhea,46,male,NORMAL,kutajarishta
+diarrhea,46,male,LOW,ajamodarka
+diarrhea,46,female,HIGH,sitopaladi churna
+diarrhea,46,female,NORMAL,kutajarishta
+diarrhea,46,female,LOW,ajamodarka
+gastritis,47,male,HIGH,trikatu churna
+gastritis,47,male,NORMAL,panchkol churna
+gastritis,47,male,LOW,ashta choornam
+gastritis,47,female,HIGH,trikatu churna
+gastritis,47,female,NORMAL,panchkol churna
+gastritis,47,female,LOW,ashta choornam
+arthritis,47,male,NORMAL,ricinus communis
+arthritis,47,male,LOW,aamvatantak churna
+arthritis,47,male,HIGH,boswellia curcumin
+arthritis,47,female,NORMAL,ricinus communis
+arthritis,47,female,LOW,aamvatantak churna
+arthritis,47,female,HIGH,boswellia curcumin
+migraine,47,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,47,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,47,male,HIGH,Jatamansi + Shankhapushpi
+migraine,47,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,47,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,47,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,47,male,HIGH,sitopaladi churna
+diarrhea,47,male,NORMAL,kutajarishta
+diarrhea,47,male,LOW,ajamodarka
+diarrhea,47,female,HIGH,sitopaladi churna
+diarrhea,47,female,NORMAL,kutajarishta
+diarrhea,47,female,LOW,ajamodarka
+gastritis,48,male,HIGH,trikatu churna
+gastritis,48,male,NORMAL,panchkol churna
+gastritis,48,male,LOW,ashta choornam
+gastritis,48,female,HIGH,trikatu churna
+gastritis,48,female,NORMAL,panchkol churna
+gastritis,48,female,LOW,ashta choornam
+arthritis,48,male,NORMAL,ricinus communis
+arthritis,48,male,LOW,aamvatantak churna
+arthritis,48,male,HIGH,boswellia curcumin
+arthritis,48,female,NORMAL,ricinus communis
+arthritis,48,female,LOW,aamvatantak churna
+arthritis,48,female,HIGH,boswellia curcumin
+migraine,48,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,48,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,48,male,HIGH,Jatamansi + Shankhapushpi
+migraine,48,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,48,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,48,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,48,male,HIGH,sitopaladi churna
+diarrhea,48,male,NORMAL,kutajarishta
+diarrhea,48,male,LOW,ajamodarka
+diarrhea,48,female,HIGH,sitopaladi churna
+diarrhea,48,female,NORMAL,kutajarishta
+diarrhea,48,female,LOW,ajamodarka
+gastritis,49,male,HIGH,trikatu churna
+gastritis,49,male,NORMAL,panchkol churna
+gastritis,49,male,LOW,ashta choornam
+gastritis,49,female,HIGH,trikatu churna
+gastritis,49,female,NORMAL,panchkol churna
+gastritis,49,female,LOW,ashta choornam
+arthritis,49,male,NORMAL,ricinus communis
+arthritis,49,male,LOW,aamvatantak churna
+arthritis,49,male,HIGH,boswellia curcumin
+arthritis,49,female,NORMAL,ricinus communis
+arthritis,49,female,LOW,aamvatantak churna
+arthritis,49,female,HIGH,boswellia curcumin
+migraine,49,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,49,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,49,male,HIGH,Jatamansi + Shankhapushpi
+migraine,49,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,49,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,49,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,49,male,HIGH,sitopaladi churna
+diarrhea,49,male,NORMAL,kutajarishta
+diarrhea,49,male,LOW,ajamodarka
+diarrhea,49,female,HIGH,sitopaladi churna
+diarrhea,49,female,NORMAL,kutajarishta
+diarrhea,49,female,LOW,ajamodarka
+gastritis,50,male,HIGH,trikatu churna
+gastritis,50,male,NORMAL,panchkol churna
+gastritis,50,male,LOW,ashta choornam
+gastritis,50,female,HIGH,trikatu churna
+gastritis,50,female,NORMAL,panchkol churna
+gastritis,50,female,LOW,ashta choornam
+arthritis,50,male,NORMAL,ricinus communis
+arthritis,50,male,LOW,aamvatantak churna
+arthritis,50,male,HIGH,boswellia curcumin
+arthritis,50,female,NORMAL,ricinus communis
+arthritis,50,female,LOW,aamvatantak churna
+arthritis,50,female,HIGH,boswellia curcumin
+migraine,50,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,50,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,50,male,HIGH,Jatamansi + Shankhapushpi
+migraine,50,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,50,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,50,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,50,male,HIGH,sitopaladi churna
+diarrhea,50,male,NORMAL,kutajarishta
+diarrhea,50,male,LOW,ajamodarka
+diarrhea,50,female,HIGH,sitopaladi churna
+diarrhea,50,female,NORMAL,kutajarishta
+diarrhea,50,female,LOW,ajamodarka
+gastritis,51,male,HIGH,trikatu churna
+gastritis,51,male,NORMAL,panchkol churna
+gastritis,51,male,LOW,ashta choornam
+gastritis,51,female,HIGH,trikatu churna
+gastritis,51,female,NORMAL,panchkol churna
+gastritis,51,female,LOW,ashta choornam
+arthritis,51,male,NORMAL,ricinus communis
+arthritis,51,male,LOW,aamvatantak churna
+arthritis,51,male,HIGH,boswellia curcumin
+arthritis,51,female,NORMAL,ricinus communis
+arthritis,51,female,LOW,aamvatantak churna
+arthritis,51,female,HIGH,boswellia curcumin
+migraine,51,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,51,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,51,male,HIGH,Jatamansi + Shankhapushpi
+migraine,51,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,51,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,51,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,51,male,HIGH,sitopaladi churna
+diarrhea,51,male,NORMAL,kutajarishta
+diarrhea,51,male,LOW,ajamodarka
+diarrhea,51,female,HIGH,sitopaladi churna
+diarrhea,51,female,NORMAL,kutajarishta
+diarrhea,51,female,LOW,ajamodarka
+gastritis,52,male,HIGH,trikatu churna
+gastritis,52,male,NORMAL,panchkol churna
+gastritis,52,male,LOW,ashta choornam
+gastritis,52,female,HIGH,trikatu churna
+gastritis,52,female,NORMAL,panchkol churna
+gastritis,52,female,LOW,ashta choornam
+arthritis,52,male,NORMAL,ricinus communis
+arthritis,52,male,LOW,aamvatantak churna
+arthritis,52,male,HIGH,boswellia curcumin
+arthritis,52,female,NORMAL,ricinus communis
+arthritis,52,female,LOW,aamvatantak churna
+arthritis,52,female,HIGH,boswellia curcumin
+migraine,52,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,52,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,52,male,HIGH,Jatamansi + Shankhapushpi
+migraine,52,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,52,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,52,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,52,male,HIGH,sitopaladi churna
+diarrhea,52,male,NORMAL,kutajarishta
+diarrhea,52,male,LOW,ajamodarka
+diarrhea,52,female,HIGH,sitopaladi churna
+diarrhea,52,female,NORMAL,kutajarishta
+diarrhea,52,female,LOW,ajamodarka
+gastritis,53,male,HIGH,trikatu churna
+gastritis,53,male,NORMAL,panchkol churna
+gastritis,53,male,LOW,ashta choornam
+gastritis,53,female,HIGH,trikatu churna
+gastritis,53,female,NORMAL,panchkol churna
+gastritis,53,female,LOW,ashta choornam
+arthritis,53,male,NORMAL,ricinus communis
+arthritis,53,male,LOW,aamvatantak churna
+arthritis,53,male,HIGH,boswellia curcumin
+arthritis,53,female,NORMAL,ricinus communis
+arthritis,53,female,LOW,aamvatantak churna
+arthritis,53,female,HIGH,boswellia curcumin
+migraine,53,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,53,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,53,male,HIGH,Jatamansi + Shankhapushpi
+migraine,53,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,53,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,53,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,53,male,HIGH,sitopaladi churna
+diarrhea,53,male,NORMAL,kutajarishta
+diarrhea,53,male,LOW,ajamodarka
+diarrhea,53,female,HIGH,sitopaladi churna
+diarrhea,53,female,NORMAL,kutajarishta
+diarrhea,53,female,LOW,ajamodarka
+gastritis,54,male,HIGH,trikatu churna
+gastritis,54,male,NORMAL,panchkol churna
+gastritis,54,male,LOW,ashta choornam
+gastritis,54,female,HIGH,trikatu churna
+gastritis,54,female,NORMAL,panchkol churna
+gastritis,54,female,LOW,ashta choornam
+arthritis,54,male,NORMAL,ricinus communis
+arthritis,54,male,LOW,aamvatantak churna
+arthritis,54,male,HIGH,boswellia curcumin
+arthritis,54,female,NORMAL,ricinus communis
+arthritis,54,female,LOW,aamvatantak churna
+arthritis,54,female,HIGH,boswellia curcumin
+migraine,54,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,54,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,54,male,HIGH,Jatamansi + Shankhapushpi
+migraine,54,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,54,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,54,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,54,male,HIGH,sitopaladi churna
+diarrhea,54,male,NORMAL,kutajarishta
+diarrhea,54,male,LOW,ajamodarka
+diarrhea,54,female,HIGH,sitopaladi churna
+diarrhea,54,female,NORMAL,kutajarishta
+diarrhea,54,female,LOW,ajamodarka
+gastritis,55,male,HIGH,trikatu churna
+gastritis,55,male,NORMAL,panchkol churna
+gastritis,55,male,LOW,ashta choornam
+gastritis,55,female,HIGH,trikatu churna
+gastritis,55,female,NORMAL,panchkol churna
+gastritis,55,female,LOW,ashta choornam
+arthritis,55,male,NORMAL,ricinus communis
+arthritis,55,male,LOW,aamvatantak churna
+arthritis,55,male,HIGH,boswellia curcumin
+arthritis,55,female,NORMAL,ricinus communis
+arthritis,55,female,LOW,aamvatantak churna
+arthritis,55,female,HIGH,boswellia curcumin
+migraine,55,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,55,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,55,male,HIGH,Jatamansi + Shankhapushpi
+migraine,55,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,55,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,55,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,55,male,HIGH,sitopaladi churna
+diarrhea,55,male,NORMAL,kutajarishta
+diarrhea,55,male,LOW,ajamodarka
+diarrhea,55,female,HIGH,sitopaladi churna
+diarrhea,55,female,NORMAL,kutajarishta
+diarrhea,55,female,LOW,ajamodarka
+gastritis,56,male,HIGH,trikatu churna
+gastritis,56,male,NORMAL,panchkol churna
+gastritis,56,male,LOW,ashta choornam
+gastritis,56,female,HIGH,trikatu churna
+gastritis,56,female,NORMAL,panchkol churna
+gastritis,56,female,LOW,ashta choornam
+arthritis,56,male,NORMAL,ricinus communis
+arthritis,56,male,LOW,aamvatantak churna
+arthritis,56,male,HIGH,boswellia curcumin
+arthritis,56,female,NORMAL,ricinus communis
+arthritis,56,female,LOW,aamvatantak churna
+arthritis,56,female,HIGH,boswellia curcumin
+migraine,56,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,56,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,56,male,HIGH,Jatamansi + Shankhapushpi
+migraine,56,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,56,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,56,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,56,male,HIGH,sitopaladi churna
+diarrhea,56,male,NORMAL,kutajarishta
+diarrhea,56,male,LOW,ajamodarka
+diarrhea,56,female,HIGH,sitopaladi churna
+diarrhea,56,female,NORMAL,kutajarishta
+diarrhea,56,female,LOW,ajamodarka
+gastritis,57,male,HIGH,trikatu churna
+gastritis,57,male,NORMAL,panchkol churna
+gastritis,57,male,LOW,ashta choornam
+gastritis,57,female,HIGH,trikatu churna
+gastritis,57,female,NORMAL,panchkol churna
+gastritis,57,female,LOW,ashta choornam
+arthritis,57,male,NORMAL,ricinus communis
+arthritis,57,male,LOW,aamvatantak churna
+arthritis,57,male,HIGH,boswellia curcumin
+arthritis,57,female,NORMAL,ricinus communis
+arthritis,57,female,LOW,aamvatantak churna
+arthritis,57,female,HIGH,boswellia curcumin
+migraine,57,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,57,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,57,male,HIGH,Jatamansi + Shankhapushpi
+migraine,57,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,57,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,57,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,57,male,HIGH,sitopaladi churna
+diarrhea,57,male,NORMAL,kutajarishta
+diarrhea,57,male,LOW,ajamodarka
+diarrhea,57,female,HIGH,sitopaladi churna
+diarrhea,57,female,NORMAL,kutajarishta
+diarrhea,57,female,LOW,ajamodarka
+gastritis,58,male,HIGH,trikatu churna
+gastritis,58,male,NORMAL,panchkol churna
+gastritis,58,male,LOW,ashta choornam
+gastritis,58,female,HIGH,trikatu churna
+gastritis,58,female,NORMAL,panchkol churna
+gastritis,58,female,LOW,ashta choornam
+arthritis,58,male,NORMAL,ricinus communis
+arthritis,58,male,LOW,aamvatantak churna
+arthritis,58,male,HIGH,boswellia curcumin
+arthritis,58,female,NORMAL,ricinus communis
+arthritis,58,female,LOW,aamvatantak churna
+arthritis,58,female,HIGH,boswellia curcumin
+migraine,58,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,58,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,58,male,HIGH,Jatamansi + Shankhapushpi
+migraine,58,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,58,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,58,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,58,male,HIGH,sitopaladi churna
+diarrhea,58,male,NORMAL,kutajarishta
+diarrhea,58,male,LOW,ajamodarka
+diarrhea,58,female,HIGH,sitopaladi churna
+diarrhea,58,female,NORMAL,kutajarishta
+diarrhea,58,female,LOW,ajamodarka
+gastritis,59,male,HIGH,trikatu churna
+gastritis,59,male,NORMAL,panchkol churna
+gastritis,59,male,LOW,ashta choornam
+gastritis,59,female,HIGH,trikatu churna
+gastritis,59,female,NORMAL,panchkol churna
+gastritis,59,female,LOW,ashta choornam
+arthritis,59,male,NORMAL,ricinus communis
+arthritis,59,male,LOW,aamvatantak churna
+arthritis,59,male,HIGH,boswellia curcumin
+arthritis,59,female,NORMAL,ricinus communis
+arthritis,59,female,LOW,aamvatantak churna
+arthritis,59,female,HIGH,boswellia curcumin
+migraine,59,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,59,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,59,male,HIGH,Jatamansi + Shankhapushpi
+migraine,59,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,59,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,59,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,59,male,HIGH,sitopaladi churna
+diarrhea,59,male,NORMAL,kutajarishta
+diarrhea,59,male,LOW,ajamodarka
+diarrhea,59,female,HIGH,sitopaladi churna
+diarrhea,59,female,NORMAL,kutajarishta
+diarrhea,59,female,LOW,ajamodarka
+gastritis,60,male,HIGH,trikatu churna
+gastritis,60,male,NORMAL,panchkol churna
+gastritis,60,male,LOW,ashta choornam
+gastritis,60,female,HIGH,trikatu churna
+gastritis,60,female,NORMAL,panchkol churna
+gastritis,60,female,LOW,ashta choornam
+arthritis,60,male,NORMAL,ricinus communis
+arthritis,60,male,LOW,aamvatantak churna
+arthritis,60,male,HIGH,boswellia curcumin
+arthritis,60,female,NORMAL,ricinus communis
+arthritis,60,female,LOW,aamvatantak churna
+arthritis,60,female,HIGH,boswellia curcumin
+migraine,60,male,LOW,Shankh Vati + Shankh Bhasma
+migraine,60,male,NORMAL,Anu Taila + Shankhapushpi
+migraine,60,male,HIGH,Jatamansi + Shankhapushpi
+migraine,60,female,LOW,Shankh Vati + Shankh Bhasma
+migraine,60,female,NORMAL,Anu Taila + Shankhapushpi
+migraine,60,female,HIGH,Jatamansi + Shankhapushpi
+diarrhea,60,male,HIGH,sitopaladi churna
+diarrhea,60,male,NORMAL,kutajarishta
+diarrhea,60,male,LOW,ajamodarka
+diarrhea,60,female,HIGH,sitopaladi churna
+diarrhea,60,female,NORMAL,kutajarishta
+diarrhea,60,female,LOW,ajamodarka
