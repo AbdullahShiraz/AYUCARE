@@ -22,23 +22,24 @@
 
 <body class="text-black bg-gray-300">
 
-        <!--   Navigation Bar-->
-        <nav class="flex items-center text-black">
+        <!--  Navigation Bar-->
+         <nav class="flex items-center text-black ">
+             <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl ">
+                 <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
+            <ul class="flex-1 text-center text-black">
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('faq') }}" class="no-underline px-2">FAQs</a></li>
 
-         <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl">
-        <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
-        <ul class="flex-1 text-center text-black">
-            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
-            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
                 </a>
-              </li>
-          </ul>
-             <a href="{{ url_for('register') }}">
-                  <button class="bg-black text-white active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full px-6" type="button" style="transition: all 0.15s ease 0s;"> Register </button>
-                 </a>
-         </div>
-         </nav>
-        <!--Navigation Bar-->
+                  </li>
+              </ul>
+                 <a href="{{ url_for('register') }}">
+                      <button class="bg-black text-white active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full px-6" type="button" style="transition: all 0.15s ease 0s;"> Register </button>
+                     </a>
+             </div>
+             </nav>
+         <!--  Navigation Bar-->
 
         <br><br>
 
@@ -73,22 +74,26 @@
                 <p class="text-xs">Please select the four symptoms that apply to you from the drop-down menus below.</p><br>
               <div class="mb-3 xl:w-full grid grid-cols-4 gap-4">
 
-                  <form method="POST">
-                    {{ form.csrf_token }}
-                    {{ form.symptom1.label }}
-                    {{ form.symptom1() }}
-                    {{ form.symptom2.label }}
-                    {{ form.symptom2() }}
-                    {{ form.symptom3.label }}
-                    {{ form.symptom3() }}
-                    {{ form.symptom4.label }}
-                    {{ form.symptom4() }}
-                    <!--{{ form.submit }}
+                   <form method="POST">
+                      <table class="border-spacing-2 ">
+                          <tr>
+                              {{ form.csrf_token }}
+                              <td class="shadow-inner pl-8"> <b>{{ form.symptom1.label }}</b>
+                    {{ form.symptom1() }}</td>
+                              <td class="shadow-inner pl-6"><b>{{ form.symptom2.label }}</b>
+                    {{ form.symptom2() }}</td>
+                              <td class="shadow-inner pl-6"><b>{{ form.symptom3.label }}</b>
+                    {{ form.symptom3() }}</td>
+                              <td class=" shadow-inner pl-6"><b>{{ form.symptom4.label }}</b>
+                    {{ form.symptom4() }}</td>
+                          </tr>
+                      </table>
+                    <br><br><br>
 
-                    -->
                     <button class="bg-black  text-white  font-bold py-2 px-4 rounded-full" type="submit">Submit</button>
                 </form>
-                {{ predicted_result }}
+                  
+                  <b>{{ predicted_result }}</b>
               </div>
 
                 <br>
