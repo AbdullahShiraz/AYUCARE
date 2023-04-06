@@ -19,9 +19,11 @@
          <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl ">
              <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
         <ul class="flex-1 text-center text-black">
-            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
-            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
-                </a>
+            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
+            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
+            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('faq') }}" class="no-underline px-2">FAQs</a></li>
+
+            </a>
               </li>
           </ul>
              <a href="{{ url_for('register') }}">
@@ -137,7 +139,8 @@
               </div>
             </div>
           </div>
-            <!-- SECTION 2 -->
+          
+          <!-- SECTION 2 -->
           <div class="flex flex-wrap items-center mt-32">
             <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
               <div class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
@@ -162,7 +165,7 @@
             </div>
             <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
               <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
-                  <!-- SECTION 2 IMAGE-->
+               <!-- SECTION 2 IMAGE-->
                 <img alt="..." src="../static/assets/img/sec2.jpg"/>
                 <blockquote class="relative p-8 mb-4">
                   <svg
@@ -193,8 +196,10 @@
           </div>
         </div>
       </section>
+      <!--SECTION 02-->
 
-      <section class="pt-20 pb-48">
+      <!--SECTION 03-->
+        <section class="pt-20 pb-48">
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap justify-center text-center mb-24">
             <div class="w-full lg:w-6/12 px-4">
@@ -204,15 +209,18 @@
               </p>
             </div>
           </div>
+
           <div class="flex flex-wrap">
+
+              <!-- Team members -->
             <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
               <div class="px-6">
-                <img alt="..." src="../static/assets/img/team-1-800x800.jpg" class="shadow-lg rounded-full max-w-full mx-auto"
+                <img alt="..." src="../static/assets/img/abdulla.jpeg" class="shadow-lg rounded-full max-w-full mx-auto"
                   style="max-width: 120px;"/>
                 <div class="pt-6 text-center">
-                  <h5 class="text-xl font-bold">Ryan Tompson</h5>
+                  <h5 class="text-xl font-bold">Abdulla Shiraz</h5>
                   <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                    Web Developer
+                    Team Leader
                   </p>
                   <div class="mt-6">
                      <button class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
@@ -227,18 +235,19 @@
                 </div>
               </div>
             </div>
+
             <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
               <div class="px-6">
                 <img
                   alt="..."
-                  src="../static/assets/img/team-2-800x800.jpg"
+                  src="../static/assets/img/nadun.jpeg"
                   class="shadow-lg rounded-full max-w-full mx-auto"
                   style="max-width: 120px;"
                 />
                 <div class="pt-6 text-center">
-                  <h5 class="text-xl font-bold">Romina Hadid</h5>
+                  <h5 class="text-xl font-bold">Nadun Senarathna</h5>
                   <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                    Marketing Specialist
+                    ML Engineer
                   </p>
                   <div class="mt-6">
                     <button
@@ -256,18 +265,19 @@
                 </div>
               </div>
             </div>
+
             <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
               <div class="px-6">
                 <img
                   alt="..."
-                  src="../static/assets/img/team-3-800x800.jpg"
+                  src="../static/assets/img/thisa.jpeg"
                   class="shadow-lg rounded-full max-w-full mx-auto"
                   style="max-width: 120px;"
                 />
                 <div class="pt-6 text-center">
-                  <h5 class="text-xl font-bold">Alexa Smith</h5>
+                  <h5 class="text-xl font-bold">Thisarika Thathsarani</h5>
                   <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                    UI/UX Designer
+                    ML Engineer
                   </p>
                   <div class="mt-6">
                     <button
@@ -290,18 +300,19 @@
                 </div>
               </div>
             </div>
+
             <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
               <div class="px-6">
                 <img
                   alt="..."
-                  src="../static/assets/img/team-4-470x470.png"
+                  src="../static/assets/img/Samu_pro_small.jpg"
                   class="shadow-lg rounded-full max-w-full mx-auto"
                   style="max-width: 120px;"
                 />
                 <div class="pt-6 text-center">
-                  <h5 class="text-xl font-bold">Jenna Kardi</h5>
+                  <h5 class="text-xl font-bold">Samudini Doraliyagoda</h5>
                   <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                    Founder and CEO
+                    ML Engineer
                   </p>
                   <div class="mt-6">
                     <button
@@ -329,10 +340,12 @@
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
-
+        <!--SECTION 03-->
+      
       <section class="pb-20 relative block bg-gray-900">
         <div
           class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
@@ -390,15 +403,7 @@
         class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
         style="height: 80px;"
       >
-        <svg
-          class="absolute bottom-0 overflow-hidden"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          version="1.1"
-          viewBox="0 0 2560 100"
-          x="0"
-          y="0"
-        >
+        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0" >
           <polygon
             class="text-gray-300 fill-current"
             points="2560 0 2560 100 0 100"
@@ -409,8 +414,6 @@
         <div class="flex flex-wrap">
           <div class="w-full lg:w-6/12 px-4">
             <h4 class="text-3xl font-semibold">AYUCARE</h4>
-{#              <img src="../static/assets/img/ayucare%20logo.png" alt="img" >#}
-
 
           </div>
           <div class="w-full lg:w-6/12 px-4">
