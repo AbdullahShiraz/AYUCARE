@@ -21,23 +21,24 @@
 </head>
 <body class="text-black bg-gray-300">
 
-        <!--   Navigation bar-->
-        <nav class="flex items-center text-black">
-
-         <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl">
-        <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
-        <ul class="flex-1 text-center text-black">
-            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
-            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
+        <!--  Navigation Bar-->
+         <nav class="flex items-center text-black ">
+             <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl ">
+                 <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
+            <ul class="flex-1 text-center text-black">
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('faq') }}" class="no-underline px-2">FAQs</a></li>
+    
                 </a>
-              </li>
-          </ul>
-             <a href="{{ url_for('register') }}">
-                  <button class="bg-black text-white active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full px-6" type="button" style="transition: all 0.15s ease 0s;"> Register </button>
-                 </a>
-         </div>
-         </nav>
-       <!--   Navigation bar-->
+                  </li>
+              </ul>
+                 <a href="{{ url_for('register') }}">
+                      <button class="bg-black text-white active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full px-6" type="button" style="transition: all 0.15s ease 0s;"> Register </button>
+                     </a>
+             </div>
+             </nav>
+         <!--  Navigation Bar-->
 
         <br><br>
 
@@ -111,8 +112,6 @@
         <div class="flex flex-wrap">
           <div class="w-full lg:w-6/12 px-4">
             <h4 class="text-3xl font-semibold">AYUCARE</h4>
-{#              <img src="../static/assets/img/ayucare%20logo.png" alt="img" >#}
-
 
           </div>
           <div class="w-full lg:w-6/12 px-4">
