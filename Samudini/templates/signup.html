@@ -9,15 +9,16 @@
 </head>
 <body class="bg-gray-300">
 
-      <!--   Navigation bar-->
-     <nav class="flex items-center text-black">
-
-         <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl">
-        <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
+       <!--  Navigation Bar-->
+     <nav class="flex items-center text-black ">
+         <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl ">
+             <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
         <ul class="flex-1 text-center text-black">
-            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
-            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
-                </a>
+            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
+            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
+            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('faq') }}" class="no-underline px-2">FAQs</a></li>
+
+            </a>
               </li>
           </ul>
              <a href="{{ url_for('register') }}">
@@ -25,13 +26,14 @@
                  </a>
          </div>
          </nav>
-       <!--   Navigation bar-->
+     <!--  Navigation Bar-->
+
       <br>
 
-         <!--   Form part-->
+        <!--   Form part-->
         <div class="flex justify-center items-center h-screen  place-items-center ">
         <div id="form" class="bg-white block  p-6 rounded-xl shadow-md shadow-slate-300 w-90">
-           <form action="" class="">
+          <form action="/signup"  class="" method="post">
 
                 <center>
                      <img src="../static/assets/img/ayucare%20logo.png" class="w-20"><br>
@@ -39,18 +41,20 @@
 
                 <!-- email -->
                 <label for="email" class="text-sm">Email</label><br>
-                <input type="emial" name="" id="email"
+                <input type="text" name="email" id="email"
                     class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent shadow-sm" placeholder="sample@gmail.com">
 
                <!-- password -->
                 <label for="password" class="text-sm">Password</label><br>
-                <input type="password" name="" id="password"
+                <input type="password" name="password" id="password"
                     class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent  shadow-sm">
 
                 <br> <br>
                <!-- Sign In -->
                 <input type="submit" name="" id="SignIn"
-                    class="bg-black w-full h-10 cursor-pointer text-white rounded-md text-sm"><br><br>
+                    class="bg-black w-full h-10 cursor-pointer text-white rounded-md text-sm"><br>
+
+
                 <p class="text-xs my-2">Don't have an account? <a href="{{ url_for ('register') }}" class="text-blue-600">Register</a></p>
             </form>
         </div>
