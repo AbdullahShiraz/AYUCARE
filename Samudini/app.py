@@ -281,6 +281,9 @@ def med_service():  # put application's code here
 def doc_service():  # put application's code here
     return render_template("doc_service.html")
 
+@app.route('/faq')
+def faq():  # put application's code here
+    return render_template("faq.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
