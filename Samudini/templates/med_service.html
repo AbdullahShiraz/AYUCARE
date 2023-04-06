@@ -74,25 +74,27 @@
                 <br>
 
              <br>
-                <center>
-                    <p class="text-xs">Once you have selected your symptoms, please click the submit button to continue. Thank you!</p><br>
+               <center>
+                    <p class="text-md">Please enter the severity to continue. Thank you!</p><br>
+                    <form action="POST">
+                        <table class="border-spacing-2">
+                            <tr>
+                                 {{ form.csrf_token }}
+                                <td class="shadow-inner pl-8">{{ form.gender.label }}
+                        {{ form.gender() }}</td>
+                                <td class="shadow-inner pl-8">{{ form.age.label }}
+                        {{ form.age() }}</td>
+                                <td class="shadow-inner pl-8"> {{ form.severity.label }}
+                        {{ form.severity() }}</td>
+                                <td class="shadow-inner pl-8" >{{ form.disease.label }}
+                        {{ form.disease() }}</td>
+                            </tr>
+                        </table>
 
-                  <form method="POST">
-                    {{ form.csrf_token }}
-                    {{ form.gender.label }}
-                    {{ form.gender() }}
-                    {{ form.age.label }}
-                    {{ form.age() }}
-                    {{ form.severity.label }}
-                    {{ form.severity() }}
-                    {{ form.disease.label }}
-                    {{ form.disease() }}
-                    <!--{{ form.submit }}
+                    </form>
+                    <br>
+                    <button class=" bg-black  text-white  font-bold py-2 px-4 rounded-full">Submit</button></center>
 
-                    -->
-                    <button class="bg-black  text-white  font-bold py-2 px-4 rounded-full" type="submit">Submit</button>
-                </form>
-                    {{ predicted_result }}
             </div>
             <!-- Jumbotron -->
 
