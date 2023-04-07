@@ -35,21 +35,32 @@ def index():
 
 
 @app.route('/signup', methods=['GET', 'POST'])
-def signup():  # firebase authendication code
+def signup():
+    error_message = None  # Initialize error message as None
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
-        if not email or not password:
-            return "Please complete all fields"
-        try:
-            email = request.form['email']
-            password = request.form['password']
-            new_user = auth.create_user_with_email_and_password(email, password)
-            auth.send_email_verification(new_user['idToken'])
-            return render_template('index.html')
-        except:
-            return render_template('signup.html')
-    return render_template("signup.html")
+
+        # Check if both email and password are filled
+        if email and password:
+            # Check if the email and password are in the database
+            with sqlite3.connect("ayucare.db") as conn:
+                c = conn.cursor()
+                c.execute("SELECT * FROM patients WHERE email = ? AND password = ?", (email, password))
+                row = c.fetchone()
+                if row is not None:
+                    # User is registered, redirect to service.html
+                    session['email'] = email  # Store email in session for future use
+                    return redirect('/service')
+                else:
+                    # User is not registered, set error message
+                    error_message = 'Invalid email or password. Please check your credentials.'
+        else:
+            # Empty fields, set error message
+            error_message = 'Please fill in all the fields before signing up.'
+
+    return render_template("signup.html", error_message=error_message)
+
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -90,10 +101,15 @@ def register():
 
     return render_template("register.html")
 
-
 @app.route('/service')
 def service():
-    return render_template("service.html")
+    # Check if user is logged in by checking if email is stored in session
+    if 'email' in session:
+        return render_template("service.html")
+    else:
+        # User is not logged in, redirect to signup page
+        flash('Please sign up to access the service.')
+        return redirect('/signup')
 
 
 if __name__ == '__main__':
