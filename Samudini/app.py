@@ -1,20 +1,76 @@
-from flask import Flask, render_template, request
+# Importing necessary Libraries
+from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, render_template, request, redirect, flash, url_for
+from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 import pickle
 import numpy as np
-from sqlalchemy import false
-import joblib
 import warnings
 from sklearn.exceptions import DataConversionWarning
 from flask_wtf import FlaskForm
-from wtforms import SelectField, SubmitField, StringField
-from wtforms.validators import InputRequired, ValidationError
+from wtforms import StringField, PasswordField, SubmitField, SelectField, IntegerField
+from wtforms.validators import InputRequired, Length, ValidationError, EqualTo
+from flask_bcrypt import Bcrypt
 
+# Ignoring User warnings and Data Conversion Warning
 warnings.filterwarnings("ignore", category=UserWarning)
 warnings.filterwarnings("ignore", category=DataConversionWarning)
 
 # Establishing Flask Connection
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SECRET_KEY'] = 'secretkey'
+
+#
+db = SQLAlchemy(app)
+bcrypt = Bcrypt(app)
+
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'signin'
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+
+# Defining the table columns
+class User(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    firstname = db.Column(db.String(80), nullable=False)
+    lastname = db.Column(db.String(80), nullable=False)
+    age = db.Column(db.Integer, nullable=False)
+    gender = db.Column(db.String(10), nullable=False)
+    email = db.Column(db.String(40), nullable=False, unique=True)
+    address = db.Column(db.String(80), nullable=False)
+    password = db.Column(db.String(80), nullable=False)
+    pastcondition = db.Column(db.String(80), nullable=False)
+
+#Defining a class called RegisterForm, which inherits from FlaskForm
+class RegisterForm(FlaskForm):
+    firstname = StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "First Name", "class": "h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent shadow-sm"})
+    lastname = StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Last Name", "class": "h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent shadow-sm"})
+    age = IntegerField(validators=[InputRequired()], render_kw={"placeholder": "Age", "class": "h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent  shadow-sm"})
+    gender = SelectField('gender', choices=[('male','male'),('female','female')], render_kw={"class": "text-sm mx-1"})
+    email = StringField(validators=[InputRequired(), Length(min=10, max=40)], render_kw={"placeholder": "Email", "class": "h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent shadow-sm"})
+    address = StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Address", "class": "h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent  shadow-sm"})
+    password = PasswordField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Password", "class": "h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent  shadow-sm"})
+    pastcondition = StringField(validators=[InputRequired(), Length(min=4, max=80)], render_kw={"placeholder": "Past Conditions", "class": "h-20 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent shadow-sm"})
+    submit = SubmitField('Register', render_kw={"class": "bg-black w-full h-10 cursor-pointer text-white rounded-md text-sm"})
+
+    # This is a validation method to check if a given email address already exists in the database.
+    def validate_email(self, email):
+        existing_user_email = User.query.filter_by(
+            email=email.data).first()
+        if existing_user_email:
+            raise ValidationError('That email already exists. Please choose a different one.')
+
+
+# Creating a login form for users to enter their email and password information, and submit it to the server for authentication..
+class LoginForm(FlaskForm):
+    email = StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Email", "class": "h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent shadow-sm"})
+
+    password = PasswordField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Password", "class": "h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent  shadow-sm"})
+
+    submit = SubmitField('Login', render_kw={"class": "bg-black w-full h-10 cursor-pointer text-white rounded-md text-sm"})
 
 #Loading Diease Dectection Pickle File
 f = open("DecisionTree-Model.sav", "rb")
@@ -23,6 +79,7 @@ model_N = pickle.load(f)
 #loading Medicine Recommendation Pickle file
 f2 = open("drugTree.pkl", "rb")
 model_med = pickle.load(f2)
+
 
 #Mapping Symptoms as indexes in dataset using dictionary
 symptom_mapping = {
@@ -58,15 +115,12 @@ symptom_mapping = {
     'belching': 29,
     'burning_ache': 30
 }
-# Creating a sample form to intergrate
+# Creating a Medical form to intergrate Medicine Recommendation Model
 class medForm(FlaskForm):
     gender = SelectField('gender', choices=[(1,'male'),(0,'female')])
     age = StringField(validators=[InputRequired()],render_kw={"placeholder": "age"})
     severity = SelectField('severity', choices=[(0,'few days'),(1,'a week'),(2,'few weeks or more')])
-    disease = SelectField('disease', choices=[(0, 'diarrhea'), (1, 'gastritis'),
-                                                (2, 'osteoarthritis'),
-                                                (3, 'rheumatoid arthritis'),
-                                                (4, 'migraine')])
+    disease = SelectField('disease', choices=[(0, 'diarrhea'), (1, 'gastritis'),(2, 'arthritis'),(3, 'migraine')])
 
 # Creating Symptoms dropdown Menu for selecting Symptoms
 class serviceForm(FlaskForm):
@@ -190,7 +244,7 @@ class serviceForm(FlaskForm):
                                                 ('heartburn', 'heartburn'),
                                                 ('belching', 'belching'),
                                                 ('burning_ache', 'burning_ache')])
-    #submit = SubmitField('Submit', render_kw={"class":"modal-open bg-black  text-white  font-bold py-2 px-4 rounded-full"})
+
 
 #Defining a fucntion to convert user inputs and predict
 def serviceValidation(selected_symptoms):
@@ -213,68 +267,77 @@ def serviceValidation(selected_symptoms):
     # Return the predicted result to the user
     return predicted_result[0]
 
-# Defining a function to recommend medicine
-def medicineValidation(selectedOptions):
-    # # put application's code here
 
-    #pre-processing required
+def medicineValidation(selectedOptions):
+    """Defining a function to recommend medicine"""
     inputs = np.array(selectedOptions)  # convert list to NumPy array
     inputs = inputs.reshape(1, -1)
     # Pass the inputs to your machine learning model and retrieve the predicted result
     recommend_Med = model_med.predict(inputs)
-    print(recommend_Med)
-    return recommend_Med[0]
     # Return the predicted result to the user
+    return recommend_Med[0]
+
 
 @app.route('/')
-def index():  # put application's code here
+def index():
     return render_template("index.html")
 
 
-@app.route('/signup')
-def signup():  # put application's code here
-    return render_template("signup.html")
+@app.route('/signin', methods=['GET', 'POST'])
+def signin():
 
-predicted_result = ""
-@app.route('/register')
-def register():  # put application's code here
-    return render_template("register.html")
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(email=form.email.data).first()
+        if user:
+            if bcrypt.check_password_hash(user.password, form.password.data):
+                login_user(user)
+                return redirect(url_for('service'))
+    return render_template('signin.html', form=form)
 
 
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    form = RegisterForm()
+    if form.validate_on_submit():
+        print(form.password.data)
+        hashed_password = bcrypt.generate_password_hash(form.password.data)
+        new_user = User( firstname=form.firstname.data, lastname=form.lastname.data, age=form.age.data, gender=form.gender.data,email=form.email.data, address=form.address.data, password=hashed_password, pastcondition=form.pastcondition.data)
+        db.session.add(new_user)
+        db.session.commit()
+        return redirect(url_for('signin'))
+
+    return render_template('register.html', form=form)
 
 @app.route('/service', methods=['GET','POST'])
+@login_required
 def service():
     global predicted_result
+    user = User.query.filter_by(id=current_user.id).first()
+
+
     form = serviceForm()
     if form.validate_on_submit():
         selectedSymptoms = [form.symptom1.data, form.symptom2.data, form.symptom3.data, form.symptom4.data]
         predicted_result = serviceValidation(selectedSymptoms)
 
-        return render_template('service.html', form=form, predicted_result=predicted_result)
-    return render_template('service.html', form=form)
+        return render_template('service.html', form=form, predicted_result=predicted_result, id=user.id, name=user.firstname.upper(), age=user.age, gender=user.gender)
+    return render_template('service.html', form=form, id=user.id, name=user.firstname.upper(), age=user.age, gender=user.gender)
 
 
 @app.route('/med_service', methods=['GET','POST'])
-def med_service():  # put application's code here
-    global predicted_result
+@login_required
+def med_service():
+
     form = medForm()
-    # if predicted_result == "diarrhea":
-    #     predicted_result = 0
-    # elif predicted_result == "gastritis":
-    #     predicted_result = 1
-    # elif predicted_result == "osteoarthritis":
-    #     predicted_result = 2
-    # elif predicted_result == "rheumatoid arthritis":
-    #     predicted_result = 3
-    # else:
-    #     predicted_result = 4
+    user = User.query.filter_by(id=current_user.id).first()
 
     if form.validate_on_submit():
-        selectedOptions = [form.disease.data, form.age.data, form.gender.data, form.severity.data ]
+        selectedOptions = [form.disease.data, form.age.data, form.gender.data, form.severity.data]
         recommend_Med = medicineValidation(selectedOptions)
-        return render_template('med_service.html', form=form, predicted_result=recommend_Med)
+        return render_template("med_service.html", form=form, predicted_result=recommend_Med, id=user.id, name=user.firstname.upper(), age=user.age, gender=user.gender)
 
-    return render_template("med_service.html", form = form)
+    return render_template("med_service.html", form=form, id=user.id, name=user.firstname.upper(), age=user.age, gender=user.gender)
 
 
 @app.route('/doc_service')

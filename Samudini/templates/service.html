@@ -5,6 +5,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"/>
      <script src="https://cdn.tailwindcss.com"></script>
+
      <link rel="shortcut icon" href="../static/assets/img/ayucare%20logo.png" />
       <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
       <style>
@@ -31,8 +32,7 @@
                 <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
                 <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('faq') }}" class="no-underline px-2">FAQs</a></li>
 
-                </a>
-                  </li>
+
               </ul>
                  <a href="{{ url_for('register') }}">
                       <button class="bg-black text-white active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full px-6" type="button" style="transition: all 0.15s ease 0s;"> Register </button>
@@ -56,10 +56,10 @@
                 <div class="flex flex-col justify-start p-6">
                   <h5
                     class="mb-2 text-xl font-medium ">
-                    Patient 182
+                    Patient {{ id }}
                   </h5>
                   <lable class="mb-4 text-base ">
-                    Name &nbsp;&nbsp;: <br>Age &nbsp;&nbsp;&nbsp;   : <br>E-mail &nbsp;&nbsp;:
+                    Name &nbsp;&nbsp;:&nbsp;&nbsp;{{ name }}  <br>Age &nbsp;&nbsp;&nbsp;   :&nbsp;&nbsp;{{ age }}   <br>Gender &nbsp;&nbsp;:&nbsp;&nbsp;{{ gender }}
                   </lable>
 
                 </div>
@@ -90,19 +90,18 @@
                       </table>
                     <br><br><br>
 
-                    <button class="bg-black  text-white  font-bold py-2 px-4 rounded-full" type="submit">Submit</button>
+                    <button id="modal" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Submit</button>
                 </form>
-                  
-                  <b>{{ predicted_result }}</b>
+
               </div>
 
                 <br>
+                Your Detected Diease is: {{ predicted_result }}
+            </div>
 
             <!-- Jumbotron -->
 
-
-
-            <!--Modal-->
+             <!--Modal-->
             <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
                 <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
 
@@ -114,6 +113,7 @@
                     </svg>
                     <span class="text-sm">(Esc)</span>
                   </div>
+
 
                   <!-- Add margin if you want to see some overlay behind the modal-->
                   <div class="modal-content py-4 text-left px-6">
@@ -132,7 +132,7 @@
                     <br>
 
                       <!-- Predicted Value should be display here------------>
-                      <h1>The predicted result is: {{ predicted_result }}</h1>
+                      <h1>Your Detected Diease is: {{ predicted_result }}</h1>
 
 
                     <!--Footer-->
@@ -142,7 +142,6 @@
 
                   </div>
                 </div>
-              </div>
             </div>
             <!--Modal-->
 

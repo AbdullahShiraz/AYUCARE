@@ -55,10 +55,10 @@
                 <div class="flex flex-col justify-start p-6">
                   <h5
                     class="mb-2 text-xl font-medium ">
-                    Patient 182
+                    Patient {{ id }}
                   </h5>
                   <lable class="mb-4 text-base ">
-                    Name &nbsp;&nbsp;: <br>Age &nbsp;&nbsp;&nbsp;   : <br>E-mail &nbsp;&nbsp;:
+                    Name &nbsp;&nbsp;:&nbsp;&nbsp;{{ name }}  <br>Age &nbsp;&nbsp;&nbsp;   :&nbsp;&nbsp;{{ age }}   <br>Gender &nbsp;&nbsp;:&nbsp;&nbsp;{{ gender }}
                   </lable>
 
                 </div>
@@ -69,32 +69,22 @@
 
             <!-- Jumbotron -->
             <div class="rounded-lg bg-neutral-100 p-6  shadow-lg   dark:shadow-black/30 py-8">
-              <h3 class="mb-5 text-2xl font-semibold">Medicine Recommendation</h3>
-
-                <br>
-
-             <br>
-               <center>
+              <h3 class="mb-5 text-2xl font-semibold">Medicine Recommendation</h3><br><br>
                     <p class="text-md">Please enter the severity to continue. Thank you!</p><br>
-                    <form action="POST">
+                    <form method="POST">
                         <table class="border-spacing-2">
                             <tr>
                                  {{ form.csrf_token }}
-                                <td class="shadow-inner pl-8">{{ form.gender.label }}
-                        {{ form.gender() }}</td>
-                                <td class="shadow-inner pl-8">{{ form.age.label }}
-                        {{ form.age() }}</td>
-                                <td class="shadow-inner pl-8"> {{ form.severity.label }}
-                        {{ form.severity() }}</td>
-                                <td class="shadow-inner pl-8" >{{ form.disease.label }}
-                        {{ form.disease() }}</td>
+                                <td class="shadow-inner pl-8">{{ form.gender.label }} {{ form.gender() }}</td>
+                                <td class="shadow-inner pl-8">{{ form.age.label }} {{ form.age() }}</td>
+                                <td class="shadow-inner pl-8"> {{ form.severity.label }} {{ form.severity() }}</td>
+                                <td class="shadow-inner pl-8" >{{ form.disease.label }} {{ form.disease() }}</td>
                             </tr>
                         </table>
-
+                        <button class=" bg-black  text-white  font-bold py-2 px-4 rounded-full" type="submit">Submit</button>
                     </form>
                     <br>
-                    <button class=" bg-black  text-white  font-bold py-2 px-4 rounded-full">Submit</button></center>
-
+                    <span>{{ predicted_result }}</span>
             </div>
             <!-- Jumbotron -->
 

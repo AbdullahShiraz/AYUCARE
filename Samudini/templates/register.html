@@ -35,58 +35,48 @@
         <!--   Form part-->
         <div class="flex justify-center items-center h-screen  place-items-center ">
         <div id="form" class=" block bg-slate-50 p-6 rounded-xl shadow-md shadow-slate-300 w-90 py-16 ">
-           <form action="/register" class="" method="post">
+
+           <form method="POST">
+               {{ form.hidden_tag() }}
                 <center><h2 class="text-black text-3xl font-semibold my-4">Register</h2></center>
                 <!-- full name -->
                 <div id="fullName" class="flex flex-row">
                     <!-- first name -->
                     <div id="firstName" class="w-1/2 mr-1">
-                        <label for="fname" class="text-sm">First Name</label><br>
-                        <input type="text" name="firstname" id="fname"
-                            class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent shadow-sm">
+                        <label class="text-sm">First Name</label><br>
+                        {{ form.firstname }}
                     </div>
                     <!-- last name -->
                     <div id="lastName" class="w-1/2 mr-1">
-                        <label for="lname" class="text-sm">Last Name</label><br>
-                        <input type="text" name="lastname" id="lname"
-                            class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent shadow-sm">
+                        <label class="text-sm">Last Name</label><br>
+                        {{ form.lastname }}
                     </div>
                 </div>
                 <!-- age -->
-                <label for="age" class="text-sm">Age</label><br>
-                <input type="number" name="age" id="age"
-                    class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent  shadow-sm">
+                <label class="text-sm">Age</label><br>
+                {{ form.age }}
                 <!-- radio buttons for gender -->
                 <div id="gender" class="text-sm mb-2">
                     <p class="mt-2">Gender</p>
-                    <input type="radio" name="gender" id="male" value="male" class="text-sm mx-1" checked><label for="male">Male</label>
-                    <input type="radio" name="gender" id="female" value="female" class="text-sm mx-1"><label for="female">Female</label>
+                    {{ form.gender }}
 
                 </div>
                 <!-- email -->
-                <label for="email" class="text-sm">Email</label><br>
-                <input type="email" name="email" id="email"
-                    class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent shadow-sm">
+                <label class="text-sm">Email</label><br>
+                {{ form.email }}
                <!-- address -->
-                <label for="address" class="text-sm">Address</label><br>
-                <input type="text" name="address" id="address"
-                    class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent  shadow-sm">
+                <label class="text-sm">Address</label><br>
+                {{ form.address }}
                <!-- password -->
-                <label for="password" class="text-sm">Password</label><br>
-                <input type="password" name="password" id="password"
-                    class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent  shadow-sm">
-                <!-- confirm password -->
-                <label for="confirmpassword" class="text-sm">Confirm Password</label><br>
-                <input type="password" name="confirmpassword" id="confirmpassword"
-                    class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent shadow-sm">
+                <label class="text-sm">Password</label><br>
+                {{ form.password }}
                 <!-- past condition -->
-                <label for="pastCondition" class="text-sm">Past Medical Conditions</label><br>
-                <textarea name="pastconditions" id="pastCondition" class="h-20 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent shadow-sm"></textarea>
+                <label class="text-sm">Past Medical Conditions</label><br>
+                {{ form.pastcondition }}
 
                <!-- Sign up / submit button -->
-                <input type="submit" name="" value="submit" id="submit"
-                    class="bg-black w-full h-10 cursor-pointer text-white rounded-md text-sm"><br>
-                <p class="text-xs my-2">Already have an account? <a href="{{ url_for('signup') }}" class="text-blue-600">Login</a></p>
+                {{ form.submit }}<br>
+                <p class="text-xs my-2">Already have an account? <a href="{{ url_for('signin') }}" class="text-blue-600">Login</a></p>
             </form>
         </div>
         </div>
