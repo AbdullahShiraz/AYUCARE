@@ -14,22 +14,24 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-             <!--  Navigation Bar-->
-             <nav class="flex items-center text-black ">
-                 <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl ">
-                     <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
-                <ul class="flex-1 text-center text-black">
-                    <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
-                    <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
-                    <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('faq') }}" class="no-underline px-2">FAQs</a></li>
+        <!--  Navigation Bar-->
+         <nav class="flex items-center text-black ">
+             <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl ">
+                 <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
+            <ul class="flex-1 text-center text-black">
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('service') }}" class="no-underline px-2">Diease Detection</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('med_service') }}" class="no-underline px-2">Medicine Recommendation</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('doc_service') }}" class="no-underline px-2">Treatment centers</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('faq') }}" class="no-underline px-2">FAQs</a></li>
 
-                    </a>
-                      </li>
-                  </ul>
+                </a>
+                  </li>
+              </ul>
 
-                 </div>
-                 </nav>
-             <!--  Navigation Bar-->
+             </div>
+             </nav>
+         <!--  Navigation Bar-->
 
            <!--Section: FAQ-->
             <section>
