@@ -19,7 +19,7 @@
 
  <title>Service</title>
 </head>
-<body class="text-black bg-gray-300">
+<body class="text-black bg-white">
 
         <!--  Navigation Bar-->
          <nav class="flex items-center text-black ">
@@ -27,20 +27,22 @@
                  <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
             <ul class="flex-1 text-center text-black">
                 <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
-                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('service') }}" class="no-underline px-2">Diease Detection</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('med_service') }}" class="no-underline px-2">Medicine Recommendation</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('doc_service') }}" class="no-underline px-2">Treatment centers</a></li>
                 <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('faq') }}" class="no-underline px-2">FAQs</a></li>
     
                 </a>
                   </li>
               </ul>
-                 <a href="{{ url_for('register') }}">
-                      <button class="bg-black text-white active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full px-6" type="button" style="transition: all 0.15s ease 0s;"> Register </button>
-                     </a>
+
              </div>
              </nav>
          <!--  Navigation Bar-->
 
-        <br><br>
+        <br>
+        <br>
+        <br>
 
         <section class="pb-20 -mt-24 " style="padding-top: 150px; padding-left: 50px;padding-right: 50px">
 
@@ -55,10 +57,10 @@
                 <div class="flex flex-col justify-start p-6">
                   <h5
                     class="mb-2 text-xl font-medium ">
-                    Patient 182
+                    Patient {{ id }}
                   </h5>
                   <lable class="mb-4 text-base ">
-                    Name &nbsp;&nbsp;: <br>Age &nbsp;&nbsp;&nbsp;   : <br>E-mail &nbsp;&nbsp;:
+                    Name &nbsp;&nbsp;:&nbsp;&nbsp;{{ name }}  <br>Age &nbsp;&nbsp;&nbsp;   :&nbsp;&nbsp;{{ age }}   <br>Gender &nbsp;&nbsp;:&nbsp;&nbsp;{{ gender }}
                   </lable>
 
                 </div>
@@ -69,20 +71,14 @@
 
             <!-- Jumbotron -->
             <div class="rounded-lg bg-neutral-100 p-6  shadow-lg   dark:shadow-black/30 py-8">
-              <h3 class="mb-5 text-2xl font-semibold">Recommended Doctors</h3>
+              <h3 class="mb-5 text-2xl font-semibold">Suggested Treatment Centers</h3>
                 <p class="text-xs">
-
+                    <p class="text-s">Discover treatment centers where specialized doctors consult. Enlarge the Map if necessary. Thank you!</p><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d126758.22722458225!2d79.84059735645762!3d6.867269467920263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sayurvedic%20specialist%20doctor%20in%20colombo!5e0!3m2!1sen!2slk!4v1680982414221!5m2!1sen!2slk" width="1100" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </p><br>
             </div>
             <!-- Jumbotron -->
 
-            <!-- close Button -->
-            <div class="flex space-x-16 align-left px-20 py-8">
-                <a href="{{ url_for('index') }}">
-                    <button class=" bg-black  text-white  font-bold py-2 px-4 rounded-full">Close</button></a>
-
-            </div>
-            <!--close Button -->
 
 
         </section>

@@ -9,20 +9,22 @@
 </head>
 <body class="bg-gray-300">
 
-         <!--  Navigation Bar-->
-             <nav class="flex items-center text-black ">
+        <!--  Navigation Bar-->
+         <nav class="flex items-center text-black ">
              <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl ">
                  <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
             <ul class="flex-1 text-center text-black">
                 <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
-                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('service') }}" class="no-underline px-2">Diease Detection</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('med_service') }}" class="no-underline px-2">Medicine Recommendation</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('doc_service') }}" class="no-underline px-2">Treatment centers</a></li>
                 <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('faq') }}" class="no-underline px-2">FAQs</a></li>
 
                 </a>
                   </li>
               </ul>
-                 <a href="{{ url_for('register') }}">
-                      <button class="bg-black text-white active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full px-6" type="button" style="transition: all 0.15s ease 0s;"> Register </button>
+                 <a href="{{ url_for('signin') }}">
+                      <button class="bg-black text-white active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full px-6" type="button" style="transition: all 0.15s ease 0s;"> Sign In </button>
                      </a>
              </div>
              </nav>
@@ -52,6 +54,7 @@
                         {{ form.lastname }}
                     </div>
                 </div>
+
                 <!-- age -->
                 <label class="text-sm">Age</label><br>
                 {{ form.age }}
@@ -65,7 +68,7 @@
                 <label class="text-sm">Email</label><br>
                 {{ form.email }}
                <!-- address -->
-                <label class="text-sm">Address</label><br>
+                <label class="text-sm">City</label><br>
                 {{ form.address }}
                <!-- password -->
                 <label class="text-sm">Password</label><br>
@@ -109,7 +112,7 @@
         <div class="flex flex-wrap">
           <div class="w-full lg:w-6/12 px-4">
             <h4 class="text-3xl font-semibold">AYUCARE</h4>
-{#              <img src="../static/assets/img/ayucare%20logo.png" alt="img" >#}
+
 
 
           </div>

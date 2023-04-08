@@ -48,10 +48,10 @@ class User(db.Model, UserMixin):
 class RegisterForm(FlaskForm):
     firstname = StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "First Name", "class": "h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent shadow-sm"})
     lastname = StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Last Name", "class": "h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent shadow-sm"})
-    age = IntegerField(validators=[InputRequired()], render_kw={"placeholder": "Age", "class": "h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent  shadow-sm"})
-    gender = SelectField('gender', choices=[('male','male'),('female','female')], render_kw={"class": "text-sm mx-1"})
+    age = IntegerField(validators=[InputRequired()], render_kw={"placeholder": "Age", "class": "h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent shadow-sm"})
+    gender = SelectField('Gender', choices=[('Male','Male'),('Female','Female')], render_kw={"class": "text-sm mx-1"})
     email = StringField(validators=[InputRequired(), Length(min=10, max=40)], render_kw={"placeholder": "Email", "class": "h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent shadow-sm"})
-    address = StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Address", "class": "h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent  shadow-sm"})
+    address = StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Enter your City", "class": "h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent  shadow-sm"})
     password = PasswordField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Password", "class": "h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent  shadow-sm"})
     pastcondition = StringField(validators=[InputRequired(), Length(min=4, max=80)], render_kw={"placeholder": "Past Conditions", "class": "h-20 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent shadow-sm"})
     submit = SubmitField('Register', render_kw={"class": "bg-black w-full h-10 cursor-pointer text-white rounded-md text-sm"})
@@ -117,14 +117,14 @@ symptom_mapping = {
 }
 # Creating a Medical form to intergrate Medicine Recommendation Model
 class medForm(FlaskForm):
-    gender = SelectField('gender', choices=[(1,'male'),(0,'female')])
-    age = StringField(validators=[InputRequired()],render_kw={"placeholder": "age"})
-    severity = SelectField('severity', choices=[(0,'few days'),(1,'a week'),(2,'few weeks or more')])
-    disease = SelectField('disease', choices=[(0, 'diarrhea'), (1, 'gastritis'),(2, 'arthritis'),(3, 'migraine')])
+    gender = SelectField('Gender :', render_kw={"style": "width: 80px;"},choices=[(1,' Male'),(0,' Female')])
+    age = StringField(validators=[InputRequired()],render_kw={"style": "width: 60px;","placeholder": "Age"})
+    severity = SelectField('Severity :',  render_kw={"style": "width: 200px;"},choices=[(0,'Few days'),(1,'A week'),(2,'Few weeks or more')])
+    disease = SelectField('Disease :',  render_kw={"style": "width: 100px;"}, choices=[(0, 'Diarrhea'), (1, 'Gastritis'),(2, 'Arthritis'),(3, 'Migraine')])
 
 # Creating Symptoms dropdown Menu for selecting Symptoms
 class serviceForm(FlaskForm):
-    symptom1 = SelectField('symptom1', choices=[('acidity','acidity'), ('indigestion','indigestion'),
+    symptom1 = SelectField('1st Symptom', choices=[('acidity','acidity'), ('indigestion','indigestion'),
                                                 ('headache','headache'),
                                                  ('blurred_and_distorted_vision','blurred_and_distorted_vision'),
                                                  ('excessive_hunger','excessive_hunger'),
@@ -154,7 +154,7 @@ class serviceForm(FlaskForm):
                                                  ('heartburn','heartburn'),
                                                  ('belching','belching'),
                                                  ('burning_ache','burning_ache')])
-    symptom2 = SelectField('symptom2', choices=[('acidity', 'acidity'), ('indigestion', 'indigestion'),
+    symptom2 = SelectField('2nd Symptom', choices=[('acidity', 'acidity'), ('indigestion', 'indigestion'),
                                                 ('headache', 'headache'),
                                                 ('blurred_and_distorted_vision', 'blurred_and_distorted_vision'),
                                                 ('excessive_hunger', 'excessive_hunger'),
@@ -184,7 +184,7 @@ class serviceForm(FlaskForm):
                                                 ('heartburn', 'heartburn'),
                                                 ('belching', 'belching'),
                                                 ('burning_ache', 'burning_ache')])
-    symptom3 = SelectField('symptom3', choices=[('acidity', 'acidity'), ('indigestion', 'indigestion'),
+    symptom3 = SelectField('3rd Symptom', choices=[('acidity', 'acidity'), ('indigestion', 'indigestion'),
                                                 ('headache', 'headache'),
                                                 ('blurred_and_distorted_vision', 'blurred_and_distorted_vision'),
                                                 ('excessive_hunger', 'excessive_hunger'),
@@ -214,7 +214,7 @@ class serviceForm(FlaskForm):
                                                 ('heartburn', 'heartburn'),
                                                 ('belching', 'belching'),
                                                 ('burning_ache', 'burning_ache')])
-    symptom4 = SelectField('symptom4', choices=[('acidity', 'acidity'), ('indigestion', 'indigestion'),
+    symptom4 = SelectField('4th Symptom', choices=[('acidity', 'acidity'), ('indigestion', 'indigestion'),
                                                 ('headache', 'headache'),
                                                 ('blurred_and_distorted_vision', 'blurred_and_distorted_vision'),
                                                 ('excessive_hunger', 'excessive_hunger'),
@@ -335,14 +335,16 @@ def med_service():
     if form.validate_on_submit():
         selectedOptions = [form.disease.data, form.age.data, form.gender.data, form.severity.data]
         recommend_Med = medicineValidation(selectedOptions)
-        return render_template("med_service.html", form=form, predicted_result=recommend_Med, id=user.id, name=user.firstname.upper(), age=user.age, gender=user.gender)
+        return render_template("med_service.html", form=form, predicted_result=recommend_Med.upper(), id=user.id, name=user.firstname.upper(), age=user.age, gender=user.gender)
 
     return render_template("med_service.html", form=form, id=user.id, name=user.firstname.upper(), age=user.age, gender=user.gender)
 
 
 @app.route('/doc_service')
 def doc_service():  # put application's code here
-    return render_template("doc_service.html")
+    user = User.query.filter_by(id=current_user.id).first()
+
+    return render_template("doc_service.html",id=user.id, name=user.firstname.upper(), age=user.age, gender=user.gender)
 
 @app.route('/faq')
 def faq():  # put application's code here
