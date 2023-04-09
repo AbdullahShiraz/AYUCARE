@@ -30,7 +30,19 @@
 
       <br>
       <br>
-
+           <!-- Error message container -->
+        <div class="top-40 absolute right-0 z-50 w-full flex justify-center">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+          {% for category, message in messages %}
+          {% if category == 'error' %}
+          <div class="alert alert-danger">{{ message }}</div>
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+          {% endwith %}
+        </div>
+       <br><br>
         <!--   Form part-->
         <div class="flex justify-center items-center h-screen  place-items-center ">
         <div id="form" class="bg-white block  p-6 rounded-xl shadow-md shadow-slate-300 w-90">

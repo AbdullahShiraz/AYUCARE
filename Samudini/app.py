@@ -11,6 +11,7 @@ from wtforms import StringField, PasswordField, SubmitField, SelectField, Intege
 from wtforms.validators import InputRequired, Length, ValidationError, DataRequired
 from flask_bcrypt import Bcrypt
 
+
 # Ignoring User warnings and Data Conversion Warning
 warnings.filterwarnings("ignore", category=UserWarning)
 warnings.filterwarnings("ignore", category=DataConversionWarning)
@@ -57,10 +58,12 @@ class RegisterForm(FlaskForm):
     submit = SubmitField('Register', render_kw={"class": "bg-black w-full h-10 cursor-pointer text-white rounded-md text-sm"})
 
     # This is a validation method to check if a given email address already exists in the database.
+    from flask import flash
+
     def validate_email(self, email):
-        existing_user_email = User.query.filter_by(
-            email=email.data).first()
+        existing_user_email = User.query.filter_by(email=email.data).first()
         if existing_user_email:
+            flash('That email already exists. Please choose a different one.', 'error')
             raise ValidationError('That email already exists. Please choose a different one.')
 
 
@@ -142,6 +145,7 @@ class serviceForm(FlaskForm):
     symptom2 = SelectField('2nd Symptom', choices=choices, default= None,validators=[DataRequired()])
     symptom3 = SelectField('3rd Symptom', choices=choices, default= None,validators=[DataRequired()])
     symptom4 = SelectField('4th Symptom', choices=choices, default= None,validators=[DataRequired()])
+
 #Defining a fucntion to convert user inputs and predict
 def serviceValidation(selected_symptoms):
 
@@ -181,15 +185,17 @@ def index():
 
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
-
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
-        if user:
-            if bcrypt.check_password_hash(user.password, form.password.data):
-                login_user(user)
-                return redirect(url_for('service'))
+        if user and bcrypt.check_password_hash(user.password, form.password.data):
+            login_user(user)
+            return redirect(url_for('service'))
+        else:
+            # login failed, display error message
+            flash('Invalid email or password. Please try again.', 'error')
     return render_template('signin.html', form=form)
+
 
 
 @app.route('/register', methods=['GET', 'POST'])

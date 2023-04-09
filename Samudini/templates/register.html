@@ -9,6 +9,9 @@
 </head>
 <body class="bg-white">
 
+
+
+
     <!--  Navigation Bar-->
      <nav class="flex items-center text-black ">
          <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl ">
@@ -30,7 +33,18 @@
 
              <br><br><br><br><br>
              <br><br><br><br><br>
-
+        <!-- Error message container -->
+            <div class="top-40 absolute right-0 z-50 w-full flex justify-center">
+              {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+              {% for category, message in messages %}
+              {% if category == 'error' %}
+              <div class="alert alert-danger">{{ message }}</div>
+              {% endif %}
+              {% endfor %}
+              {% endif %}
+              {% endwith %}
+            </div>
 
         <!--   Form part-->
         <div class="flex justify-center items-center h-screen  place-items-center ">
@@ -84,6 +98,7 @@
          <!--   Form part-->
 
       <br><br><br><br><br><br>
+
 
          <!--   Footer section-->
         <footer class="relative bg-gray-300 pt-8 pb-6">
