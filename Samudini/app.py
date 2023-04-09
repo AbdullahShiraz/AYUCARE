@@ -120,10 +120,10 @@ symptom_mapping = {
 }
 # Creating a Medical form to intergrate Medicine Recommendation Model
 class medForm(FlaskForm):
-    gender = SelectField('Gender :', render_kw={"style": "width: 80px;"},choices=[(1,' Male'),(0,' Female')])
+    gender = SelectField('Gender :', render_kw={"style": "width: 170px;"},choices=[('', ' Select your gender'),(1,' Male'),(0,' Female')],default= None,validators=[DataRequired()])
     age = StringField(validators=[InputRequired()],render_kw={"style": "width: 60px;","placeholder": "Age"})
-    severity = SelectField('Severity :',  render_kw={"style": "width: 200px;"},choices=[(0,'Few days'),(1,'A week'),(2,'Few weeks or more')])
-    disease = SelectField('Disease :',  render_kw={"style": "width: 100px;"}, choices=[(0, 'Diarrhea'), (1, 'Gastritis'),(2, 'Arthritis'),(3, 'Migraine')])
+    severity = SelectField('Severity :',  render_kw={"style": "width: 220px;"},choices=[('', 'Select the level of severity'),(0,'Few days'),(1,'A week'),(2,'Few weeks or more')],default= None,validators=[DataRequired()])
+    disease = SelectField('Disease :',  render_kw={"style": "width: 150px;"}, choices=[('', ' Select the diease'),(0, 'Diarrhea'), (1, 'Gastritis'),(2, 'Arthritis'),(3, 'Migraine')],default= None,validators=[DataRequired()])
 
 # Creating Symptoms dropdown Menu for selecting Symptoms
 class serviceForm(FlaskForm):
