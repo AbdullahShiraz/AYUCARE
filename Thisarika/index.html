@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" href="../static/assets/img/ayucare%20logo.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../static/assets/img/apple-icon.png"/>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"/>
+      <script src="https://cdn.tailwindcss.com"></script>
+   <title>AyuCare</title>
+  </head>
+
+  <body class=" antialiased ">
+
+    {#    Navigation Bar#}
+     <nav class="flex items-center text-black">
+         <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 ">
+        <img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer">
+        <ul class="flex-1 text-center text-black">
+            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
+            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
+                </a>
+              </li>
+          </ul>
+             <a href="{{ url_for('register') }}">
+                  <button class="bg-black text-white active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full px-6" type="button" style="transition: all 0.15s ease 0s;"> Register </button>
+                 </a>
+         </div>
+         </nav>
+     {#    Navigation Bar#}
+
+    {#    Main Section#}
+    <main>
+        <div class= "relative pt-20 pb-32 flex content-center items-center justify-center" style="min-height: 75vh;" >
+            <div class="absolute top-0 w-full h-full bg-center bg-cover" style='background-image: url("../static/assets/img/m.png");'>
+            <span class="w-full h-full absolute  "></span>
+        </div>
+        <div class="container relative mx-auto">
+          <div class="items-center flex flex-wrap">
+            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+              <div class="pr-12">
+                <h1 class="pt-20 font-bold text-5xl text-black">
+                  AYUCARE
+                </h1>
+                  <br><br>
+                <p class="mt-4 text-lg text-black">
+                  <b>STATE-OF-THE-ART DISEASE PREDICTION
+                      <br>&<br> AYURVEDIC TREATMENT RECOMMENDATION PLATFORM</b>
+                </p>
+                  <br><br>
+                  <center>
+                      <a href="{{ url_for('signup') }}">
+                      <button class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-8 py-2 rounded outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full transition duration-150
+                          ease-in-out bg-gradient-to-r from-green-400 to-blue-500 hover:from-gray-500 hover:to-gray-200 ..."
+                        type="button"
+                        style="transition: all 0.15s ease 0s;">
+                        Begin Your Journey Today
+                      </button></a>
+                  </center>
+                    <br><br>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden" style="height: 70px;">
+          <svg
+            class="absolute bottom-0 overflow-hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0"
+          >
+            <polygon
+              class="text-gray-300 fill-current"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
+          </svg>
+        </div>
+      </div>
+      <section class="pb-20 bg-gray-300 -mt-24  ">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap ">
+            <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div class="px-4 py-5 flex-auto">
+                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                    <i class="fas fa-award"></i>
+                  </div>
+                    <a href="{{ url_for('service') }}">
+                  <h6 class="text-xl font-semibold">Predicting Symptoms</h6>
+                  <p class="mt-2 mb-4 text-gray-600">
+                    Our advanced model predicts <br> <b>Migraine, Gastric, Diarrhea & Arthritis </b> <br>from symptoms.
+                      This personalized service empowers users to identify potential health issues and
+                      seek medical attention promptly, ultimately leading to better health outcomes.
+                  </p>
+                        </a>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-4/12 px-4 text-center">
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div class="px-4 py-5 flex-auto">
+                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
+                    <i class="fas fa-retweet"></i>
+                  </div>
+                    <a href="{{ url_for('service') }}">
+                  <h6 class="text-xl font-semibold ">Recommending Ayurvedic Medicine</h6>
+                  <p class="mt-2 mb-4 text-gray-600">
+                   Our Ayurvedic medicine recommendation system suggests personalized,
+                      natural remedies based on individual symptoms. This brings traditional knowledge to the modern world,
+                      offering a holistic approach to health that promotes well-being for all.
+                  </p>
+                    </a>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 w-full md:w-4/12 px-4 text-center">
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div class="px-4 py-5 flex-auto">
+                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
+                    <i class="fas fa-fingerprint"></i>
+                  </div>
+                    <a href="{{ url_for('service') }}">
+                  <h6 class="text-xl font-semibold">Recommending Doctors</h6>
+                  <p class="mt-2 mb-4 text-gray-600">
+                    Our Ayurvedic doctor recommendation system connects users with certified practitioners,
+                      offering personalized holistic healthcare.
+                      This brings the ancient practice of Ayurveda to the modern world,
+                      promoting optimal wellness for all.
+                  </p>
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+{#           SECTION 02 #}
+          <div class="flex flex-wrap items-center mt-32">
+            <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
+              <div class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
+                <i class="fas fa-user-friends text-xl"></i>
+              </div>
+              <h3 class="text-3xl mb-2 font-semibold leading-normal">
+                Learn More About AyuCare
+              </h3>
+              <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
+                 Machine learning models are revolutionizing the field of Ayurvedic medicine by providing
+                    personalized and accurate disease predictions and natural remedies. <br>
+
+              </p>
+              <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
+                These models use advanced algorithms and constantly updated medical research to offer a
+                    holistic approach to healthcare that empowers users to identify potential health issues
+                    and seek timely medical attention. <br>Our Ayurvedic medicine and doctor recommendation
+                    systems bring traditional knowledge to the modern world, connecting users with certified practitioners
+                    and offering personalized holistic care that promotes optimal wellness for all.
+              </p>
+
+            </div>
+            <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
+{#                   SECTION 2 IMAGE#}
+                <img alt="..." src="../static/assets/img/sec2.jpg"/>
+                <blockquote class="relative p-8 mb-4">
+                  <svg
+                    preserveAspectRatio="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 583 95"
+                    class="absolute left-0 w-full block"
+                    style="height: 95px; top: -94px;">
+                    <polygon
+                      points="-30,95 583,95 583,65"
+                      class="text-pink-600 fill-current"
+                    ></polygon>
+                  </svg>
+                  <h4 class="text-xl font-bold text-white">
+
+                  </h4>
+                  <p class="text-md font-light mt-2 text-black">
+                    At AyuCare, we are dedicated to providing you with the most innovative and
+                      reliable healthcare services. Our state-of-the-art research is ongoing
+                      as we continue to perfect our disease detection capabilities, including Migraine,
+                      Diarrhea, Gastric, and Arthritis. Our Ayurvedic medicine recommendations are
+                      easy to use from the comfort of your own home, allowing you to prioritize your
+                      health in a convenient and accessible way.
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pt-20 pb-48">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap justify-center text-center mb-24">
+            <div class="w-full lg:w-6/12 px-4">
+              <h2 class="text-4xl font-semibold">Our Team</h2>
+              <p class="text-lg leading-relaxed m-4 text-gray-600">
+                The Experts Behind Our Innovative Solutions
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap">
+            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div class="px-6">
+                <img alt="..." src="../static/assets/img/team-1-800x800.jpg" class="shadow-lg rounded-full max-w-full mx-auto"
+                  style="max-width: 120px;"/>
+                <div class="pt-6 text-center">
+                  <h5 class="text-xl font-bold">Ryan Tompson</h5>
+                  <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                    Web Developer
+                  </p>
+                  <div class="mt-6">
+                     <button class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                        <i class="fab fa-twitter"></i></button>
+                      <button class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                        <i class="fab fa-facebook-f"></i>
+                      </button>
+                      <button class="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                        <i class="fab fa-dribbble"></i>
+                      </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div class="px-6">
+                <img
+                  alt="..."
+                  src="../static/assets/img/team-2-800x800.jpg"
+                  class="shadow-lg rounded-full max-w-full mx-auto"
+                  style="max-width: 120px;"
+                />
+                <div class="pt-6 text-center">
+                  <h5 class="text-xl font-bold">Romina Hadid</h5>
+                  <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                    Marketing Specialist
+                  </p>
+                  <div class="mt-6">
+                    <button
+                      class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-google"></i></button
+                    ><button
+                      class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-facebook-f"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div class="px-6">
+                <img
+                  alt="..."
+                  src="../static/assets/img/team-3-800x800.jpg"
+                  class="shadow-lg rounded-full max-w-full mx-auto"
+                  style="max-width: 120px;"
+                />
+                <div class="pt-6 text-center">
+                  <h5 class="text-xl font-bold">Alexa Smith</h5>
+                  <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                    UI/UX Designer
+                  </p>
+                  <div class="mt-6">
+                    <button
+                      class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-google"></i></button
+                    ><button
+                      class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-twitter"></i></button
+                    ><button
+                      class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div class="px-6">
+                <img
+                  alt="..."
+                  src="../static/assets/img/team-4-470x470.png"
+                  class="shadow-lg rounded-full max-w-full mx-auto"
+                  style="max-width: 120px;"
+                />
+                <div class="pt-6 text-center">
+                  <h5 class="text-xl font-bold">Jenna Kardi</h5>
+                  <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                    Founder and CEO
+                  </p>
+                  <div class="mt-6">
+                    <button
+                      class="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-dribbble"></i></button
+                    ><button
+                      class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-google"></i></button
+                    ><button
+                      class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-twitter"></i></button
+                    ><button
+                      class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-20 relative block bg-gray-900">
+        <div
+          class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+          style="height: 80px;"
+        >
+          <svg
+            class="absolute bottom-0 overflow-hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0"
+          >
+            <polygon
+              class="text-gray-900 fill-current"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
+          </svg>
+        </div>
+        <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
+          <div class="flex flex-wrap text-center justify-center">
+            <div class="w-full lg:w-6/12 px-4">
+              <h2 class="text-3xl font-semibold text-white">Register Today for a Personalized Experience</h2><br>
+              <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
+               We are committed to providing our users
+                  with the most personalized and effective healthcare experience possible.
+                  To get started, simply register for our services,
+                  and gain access to our powerful disease prediction and Ayurvedic medicine recommendation systems.
+                  By inputting your symptoms and using our advanced machine learning algorithms,
+                  you can receive accurate and reliable disease predictions,
+                  and natural remedies that can be easily accessed from home. <br>
+                  Join our community today and prioritize your health with AyuCare.
+              </p>
+                <br>
+                <center> <a href="{{ url_for('register') }}">
+                      <button class=" text-xs font-bold uppercase px-4 py-2 rounded outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full transition duration-150
+                          ease-in-out bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ..."
+                        type="button"
+                        style="transition: all 0.15s ease 0s;">
+                        Register
+                      </button></a></center>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+    {#    Main Section#}
+
+    {#    Footer Section#}
+    <footer class="relative bg-gray-300 pt-8 pb-6">
+      <div
+        class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+        style="height: 80px;"
+      >
+        <svg
+          class="absolute bottom-0 overflow-hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          version="1.1"
+          viewBox="0 0 2560 100"
+          x="0"
+          y="0"
+        >
+          <polygon
+            class="text-gray-300 fill-current"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
+        </svg>
+      </div>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap">
+          <div class="w-full lg:w-6/12 px-4">
+            <h4 class="text-3xl font-semibold">AYUCARE</h4>
+{#              <img src="../static/assets/img/ayucare%20logo.png" alt="img" >#}
+
+
+          </div>
+          <div class="w-full lg:w-6/12 px-4">
+            <div class="flex flex-wrap items-top mb-6">
+              <div class="w-full lg:w-4/12 px-4 ml-auto">
+                <span
+                  class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                  >Useful Links</span
+                >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="https://www.creative-tim.com/presentation"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="{{ url_for('service') }}">
+                      Services</a
+                    >
+                  </li>
+
+                </ul>
+              </div>
+              <div class="w-full lg:w-4/12 px-4">
+                <span
+                  class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                  >Other Resources</span
+                >
+                <ul class="list-unstyled">
+
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Terms &amp; Conditions</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="my-6 border-gray-400" />
+        <div
+          class="flex flex-wrap items-center md:justify-between justify-center"
+        >
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-gray-600 font-semibold py-1">
+              Copyright © 2023 AyuCare
+              <a
+                href="#"
+                class="text-gray-600 hover:text-gray-900"
+                >G04 </a
+              >.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    {#    Footer Section#}
+
+  </body>
+  <script>
+    function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+  </script>
+</html>

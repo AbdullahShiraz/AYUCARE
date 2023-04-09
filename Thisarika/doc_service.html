@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"/>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+     <link rel="shortcut icon" href="../static/assets/img/ayucare%20logo.png" />
+      <style>
+        .modal {
+          transition: opacity 0.25s ease;
+        }
+        body.modal-active {
+          overflow-x: hidden;
+          overflow-y: visible !important;
+        }
+      </style>
+
+ <title>Service</title>
+</head>
+<body class="text-black bg-gray-300">
+
+        <!--   Navigation bar-->
+        <nav class="flex items-center text-black">
+
+         <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl">
+        <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
+        <ul class="flex-1 text-center text-black">
+            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
+            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
+                </a>
+              </li>
+          </ul>
+             <a href="{{ url_for('register') }}">
+                  <button class="bg-black text-white active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full px-6" type="button" style="transition: all 0.15s ease 0s;"> Register </button>
+                 </a>
+         </div>
+         </nav>
+       <!--   Navigation bar-->
+
+        <br><br>
+
+        <section class="pb-20 -mt-24 " style="padding-top: 150px; padding-left: 50px;padding-right: 50px">
+
+            <!--Patient details card-->
+            <div class="flex justify-left ">
+              <div
+                class="flex flex-col rounded-lg bg-white shadow-lg  md:max-w-xl md:flex-row">
+                <img
+                  class="h-auto max-w-xs rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                  src="../static/assets/img/avatar.png"
+                  alt="" />
+                <div class="flex flex-col justify-start p-6">
+                  <h5
+                    class="mb-2 text-xl font-medium ">
+                    Patient 182
+                  </h5>
+                  <lable class="mb-4 text-base ">
+                    Name &nbsp;&nbsp;: <br>Age &nbsp;&nbsp;&nbsp;   : <br>E-mail &nbsp;&nbsp;:
+                  </lable>
+
+                </div>
+              </div>
+            </div>
+             <!--Patient details card-->
+            <br><br>
+
+            <!-- Jumbotron -->
+            <div class="rounded-lg bg-neutral-100 p-6  shadow-lg   dark:shadow-black/30 py-8">
+              <h3 class="mb-5 text-2xl font-semibold">Recommended Doctors</h3>
+                <p class="text-xs">
+
+                </p><br>
+            </div>
+            <!-- Jumbotron -->
+
+            <!-- close Button -->
+            <div class="flex space-x-16 align-left px-20 py-8">
+                <a href="{{ url_for('index') }}">
+                    <button class=" bg-black  text-white  font-bold py-2 px-4 rounded-full">Close</button></a>
+
+            </div>
+            <!--close Button -->
+
+
+        </section>
+
+       <!--   Footer section-->
+        <footer class="relative bg-gray-300 pt-8 pb-6">
+      <div
+        class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+        style="height: 80px;"
+      >
+        <svg
+          class="absolute bottom-0 overflow-hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          version="1.1"
+          viewBox="0 0 2560 100"
+          x="0"
+          y="0"
+        >
+          <polygon
+            class="text-gray-300 fill-current"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
+        </svg>
+      </div>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap">
+          <div class="w-full lg:w-6/12 px-4">
+            <h4 class="text-3xl font-semibold">AYUCARE</h4>
+{#              <img src="../static/assets/img/ayucare%20logo.png" alt="img" >#}
+
+
+          </div>
+          <div class="w-full lg:w-6/12 px-4">
+            <div class="flex flex-wrap items-top mb-6">
+              <div class="w-full lg:w-4/12 px-4 ml-auto">
+                <span
+                  class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                  >Useful Links</span
+                >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="https://www.creative-tim.com/presentation"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="{{ url_for('service') }}">
+                      Services</a
+                    >
+                  </li>
+
+                </ul>
+              </div>
+              <div class="w-full lg:w-4/12 px-4">
+                <span
+                  class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                  >Other Resources</span
+                >
+                <ul class="list-unstyled">
+
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Terms &amp; Conditions</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="my-6 border-gray-400" />
+        <div
+          class="flex flex-wrap items-center md:justify-between justify-center"
+        >
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-gray-600 font-semibold py-1">
+              Copyright © 2023 AyuCare
+              <a
+                href="#"
+                class="text-gray-600 hover:text-gray-900"
+                >G04 </a
+              >.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+        <!--   Footer section-->
+
+  <script>
+    var openmodal = document.querySelectorAll('.modal-open')
+    for (var i = 0; i < openmodal.length; i++) {
+      openmodal[i].addEventListener('click', function(event){
+    	event.preventDefault()
+    	toggleModal()
+      })
+    }
+
+    const overlay = document.querySelector('.modal-overlay')
+    overlay.addEventListener('click', toggleModal)
+
+    var closemodal = document.querySelectorAll('.modal-close')
+    for (var i = 0; i < closemodal.length; i++) {
+      closemodal[i].addEventListener('click', toggleModal)
+    }
+
+    document.onkeydown = function(evt) {
+      evt = evt || window.event
+      var isEscape = false
+      if ("key" in evt) {
+    	isEscape = (evt.key === "Escape" || evt.key === "Esc")
+      } else {
+    	isEscape = (evt.keyCode === 27)
+      }
+      if (isEscape && document.body.classList.contains('modal-active')) {
+    	toggleModal()
+      }
+    };
+
+
+    function toggleModal () {
+      const body = document.querySelector('body')
+      const modal = document.querySelector('.modal')
+      modal.classList.toggle('opacity-0')
+      modal.classList.toggle('pointer-events-none')
+      body.classList.toggle('modal-active')
+    }
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"/>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="shortcut icon" href="../static/assets/img/ayucare%20logo.png" />
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+      <style>
+        .modal {
+          transition: opacity 0.25s ease;
+        }
+        body.modal-active {
+          overflow-x: hidden;
+          overflow-y: visible !important;
+        }
+      </style>
+
+ <title>Service</title>
+</head>
+
+<body class="text-black bg-gray-300">
+
+        <!--   Navigation Bar-->
+        <nav class="flex items-center text-black">
+
+         <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl">
+        <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
+        <ul class="flex-1 text-center text-black">
+            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
+            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline "><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
+                </a>
+              </li>
+          </ul>
+             <a href="{{ url_for('register') }}">
+                  <button class="bg-black text-white active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full px-6" type="button" style="transition: all 0.15s ease 0s;"> Register </button>
+                 </a>
+         </div>
+         </nav>
+        <!--Navigation Bar-->
+
+        <br><br>
+
+        <section class="pb-20 -mt-24 " style="padding-top: 150px; padding-left: 50px;padding-right: 50px">
+
+            <!--Patient details card-->
+            <div class="flex justify-left ">
+              <div
+                class="flex flex-col rounded-lg bg-white shadow-lg  md:max-w-xl md:flex-row">
+                <img
+                  class="h-auto max-w-xs rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                  src="../static/assets/img/avatar.png"
+                  alt="" />
+                <div class="flex flex-col justify-start p-6">
+                  <h5
+                    class="mb-2 text-xl font-medium ">
+                    Patient 182
+                  </h5>
+                  <lable class="mb-4 text-base ">
+                    Name &nbsp;&nbsp;: <br>Age &nbsp;&nbsp;&nbsp;   : <br>E-mail &nbsp;&nbsp;:
+                  </lable>
+
+                </div>
+              </div>
+            </div>
+             <!--Patient details card-->
+            <br><br>
+
+            <!-- Jumbotron -->
+            <div class="rounded-lg bg-neutral-100 p-6  shadow-lg   dark:shadow-black/30 py-8">
+              <h3 class="mb-5 text-2xl font-semibold">Select Symptoms</h3>
+                <p class="text-xs">Please select the four symptoms that apply to you from the drop-down menus below.</p><br>
+              <div class="mb-3 xl:w-full grid grid-cols-4 gap-4">
+
+                  <form method="POST">
+                    {{ form.csrf_token }}
+                    {{ form.symptom1.label }}
+                    {{ form.symptom1() }}
+                    {{ form.symptom2.label }}
+                    {{ form.symptom2() }}
+                    {{ form.symptom3.label }}
+                    {{ form.symptom3() }}
+                    {{ form.symptom4.label }}
+                    {{ form.symptom4() }}
+                    <!--{{ form.submit }}
+                    -->
+                    <button class="bg-black  text-white  font-bold py-2 px-4 rounded-full" type="submit">Submit</button>
+                </form>
+                {{ predicted_result }}
+              </div>
+
+                <br>
+
+            <!-- Jumbotron -->
+
+
+
+            <!--Modal-->
+            <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+                <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+
+                <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+
+                  <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+                    <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                      <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                    </svg>
+                    <span class="text-sm">(Esc)</span>
+                  </div>
+
+                  <!-- Add margin if you want to see some overlay behind the modal-->
+                  <div class="modal-content py-4 text-left px-6">
+                    <!--Title-->
+                    <div class="flex justify-between items-center pb-3">
+                      <p class="text-2xl font-bold">Result!</p>
+                      <div class="modal-close cursor-pointer z-50">
+                        <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                          <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <!--Body-->
+                    <p>Predicted Result</p>
+                    <br>
+
+                      <!-- Predicted Value should be display here------------>
+                      <h1>The predicted result is: {{ predicted_result }}</h1>
+
+
+                    <!--Footer-->
+                    <div class="flex justify-end pt-2">
+                      <button class="modal-close px-4 bg-black p-3 rounded-lg text-white ">Close</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Modal-->
+
+        </section>
+
+            <!-- Medicine | Doctor Button -->
+            <div class="flex space-x-16 px-20 py-8 align-left">
+                <a href="{{ url_for('med_service') }}"><button class=" bg-black  text-white  font-bold py-2 px-4 rounded-full">Medicine</button></a>
+                <a href="{{ url_for('doc_service') }}"><button class=" bg-black  text-white  font-bold py-2 px-6 rounded-full">Doctors </button></a>
+            </div>
+            <!-- Medicine| Doctor Button -->
+
+        <!--    Footer Section-->
+        <footer class="relative bg-gray-300 pt-8 pb-6">
+      <div
+        class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+        style="height: 80px;"
+      >
+        <svg
+          class="absolute bottom-0 overflow-hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          version="1.1"
+          viewBox="0 0 2560 100"
+          x="0"
+          y="0"
+        >
+          <polygon
+            class="text-gray-300 fill-current"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
+        </svg>
+      </div>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap">
+          <div class="w-full lg:w-6/12 px-4">
+            <h4 class="text-3xl font-semibold">AYUCARE</h4>
+
+          </div>
+          <div class="w-full lg:w-6/12 px-4">
+            <div class="flex flex-wrap items-top mb-6">
+              <div class="w-full lg:w-4/12 px-4 ml-auto">
+                <span
+                  class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                  >Useful Links</span
+                >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="https://www.creative-tim.com/presentation"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="{{ url_for('service') }}">
+                      Services</a
+                    >
+                  </li>
+
+                </ul>
+              </div>
+              <div class="w-full lg:w-4/12 px-4">
+                <span
+                  class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                  >Other Resources</span
+                >
+                <ul class="list-unstyled">
+
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Terms &amp; Conditions</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="my-6 border-gray-400" />
+        <div
+          class="flex flex-wrap items-center md:justify-between justify-center"
+        >
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-gray-600 font-semibold py-1">
+              Copyright © 2023 AyuCare
+              <a
+                href="#"
+                class="text-gray-600 hover:text-gray-900"
+                >G04 </a
+              >.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+       <!--    Footer Section-->
+
+
+
+</body>
+</html>
