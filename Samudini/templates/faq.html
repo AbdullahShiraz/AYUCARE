@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" href="../static/assets/img/ayucare%20logo.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../static/assets/img/apple-icon.png"/>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet"/>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+        <!--  Navigation Bar-->
+         <nav class="flex items-center text-black ">
+             <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl ">
+                 <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
+            <ul class="flex-1 text-center text-black">
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('service') }}" class="no-underline px-2">Diease Detection</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('med_service') }}" class="no-underline px-2">Medicine Recommendation</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('doc_service') }}" class="no-underline px-2">Treatment centers</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('faq') }}" class="no-underline px-2">FAQs</a></li>
+
+                </a>
+                  </li>
+              </ul>
+
+             </div>
+             </nav>
+         <!--  Navigation Bar-->
+
+           <!--Section: FAQ-->
+            <section>
+                <br><br>
+                <div class=" mx-14 my-14 mb-12">
+                  <h1 class="text-center text-2xl mb-4 pb-2 pt-28 text-black fw-bold">FAQ</h1>
+                  <p class="text-center mb-5">
+                      <b>Find the answers for the most frequently asked questions below</b>
+                  </p>
+
+                  <div class="row">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <h6 class="mb-3 text-primary"><i class="far fa-paper-plane text-primary pe-2"></i> <b>What is the purpose of this website?</b></h6>
+                          <p>
+                            The purpose of this website is to provide users with tools to predict diseases, receive Ayurvedic medicine recommendations, and receive doctor recommendations.
+                            </p>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <h6 class="mb-3 text-primary"><i class="fas fa-pen-alt text-primary pe-2"></i> <b>Is the information on this website accurate and reliable?</b></h6>
+                      <p>
+                       <strong>Yes</strong>, the information on this website is accurate and reliable. We work with experienced healthcare professionals to ensure that our information and recommendations are up-to-date and trustworthy.
+                      </p>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-4">
+                      <h6 class="mb-3 text-primary"><i class="fas fa-user text-primary pe-2"></i><b> How accurate is the disease predicting model?</b>
+                      </h6>
+                      <p>
+                        The accuracy of the disease predicting model varies depending on the disease being predicted, but it is generally quite accurate. However, it is important to note that this model is not a substitute for a medical diagnosis.
+                      </p>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <h6 class="mb-3 text-primary"><i class="fas fa-rocket text-primary pe-2"></i> <b>What should I do if the model predicts that I have a disease?</b>
+                      </h6>
+                      <p>
+                        If the model predicts that you may have a disease, we recommend that you seek the advice of a healthcare professional for a proper diagnosis and treatment plan.
+                      </p>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <h6 class="mb-3 text-primary"><i class="fas fa-home text-primary pe-2"></i> <b>Can I use this model to diagnose myself?</b>
+                      </h6>
+                      <p><strong><u>Unfortunately no</u>.</strong>, this model is not meant to be used as a substitute for a medical diagnosis. It is intended to provide information and suggestions, but you should always consult with a healthcare professional for a proper diagnosis and treatment plan.</p>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-4">
+                      <h6 class="mb-3 text-primary"><i class="fas fa-book-open text-primary pe-2"></i><b> Is Ayurvedic medicine safe?</b></h6>
+                      <p>
+                        When used properly, Ayurvedic medicine can be safe and effective. However, it is important to consult with a healthcare professional before using any new treatments or remedies, and to ensure that you are using them correctly.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+            </section>
+           <!--Section: FAQ-->
+
+           <!--  Footer section-->
+            <footer class="relative bg-gray-300 pt-8 pb-6">
+              <div
+                class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+                style="height: 80px;"
+              >
+                <svg
+                  class="absolute bottom-0 overflow-hidden"
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="none"
+                  version="1.1"
+                  viewBox="0 0 2560 100"
+                  x="0"
+                  y="0"
+                >
+                  <polygon
+                    class="text-gray-300 fill-current"
+                    points="2560 0 2560 100 0 100"
+                  ></polygon>
+                </svg>
+              </div>
+              <div class="container mx-auto px-4">
+                <div class="flex flex-wrap">
+                  <div class="w-full lg:w-6/12 px-4">
+                    <h4 class="text-3xl font-semibold">AYUCARE</h4>
+
+
+                  </div>
+                  <div class="w-full lg:w-6/12 px-4">
+                    <div class="flex flex-wrap items-top mb-6">
+                      <div class="w-full lg:w-4/12 px-4 ml-auto">
+                        <span
+                          class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                          >Useful Links</span
+                        >
+                        <ul class="list-unstyled">
+                          <li>
+                            <a
+                              class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                              href="https://www.creative-tim.com/presentation"
+                              >About Us</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                              href="{{ url_for('service') }}">
+                              Services</a
+                            >
+                          </li>
+
+                        </ul>
+                      </div>
+                      <div class="w-full lg:w-4/12 px-4">
+                        <span
+                          class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                          >Other Resources</span
+                        >
+                        <ul class="list-unstyled">
+
+                          <li>
+                            <a
+                              class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                              href="#"
+                              >Terms &amp; Conditions</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                              href="#"
+                              >Privacy Policy</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                              href="#"
+                              >Contact Us</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-6 border-gray-400" />
+                <div
+                  class="flex flex-wrap items-center md:justify-between justify-center"
+                >
+                  <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                    <div class="text-sm text-gray-600 font-semibold py-1">
+                      Copyright © 2023 AyuCare
+                      <a
+                        href="#"
+                        class="text-gray-600 hover:text-gray-900"
+                        > </a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </footer>
+            <!--  Footer section-->
+</body>
+</html>

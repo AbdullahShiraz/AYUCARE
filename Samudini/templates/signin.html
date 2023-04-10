@@ -1,0 +1,181 @@
+<!Doctype html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="shortcut icon" href="../static/assets/img/ayucare%20logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Registration Page</title>
+</head>
+<body class="bg-white">
+
+       <!--  Navigation Bar-->
+     <nav class="flex items-center text-black ">
+         <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl ">
+             <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
+        <ul class="flex-1 text-center text-black">
+            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
+            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('service') }}" class="no-underline px-2">Services</a></li>
+            <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('faq') }}" class="no-underline px-2">FAQs</a></li>
+
+            </a>
+              </li>
+          </ul>
+             <a href="{{ url_for('register') }}">
+                  <button class="bg-black text-white active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 rounded-full px-6" type="button" style="transition: all 0.15s ease 0s;"> Register </button>
+                 </a>
+         </div>
+         </nav>
+     <!--  Navigation Bar-->
+
+      <br>
+      <br>
+           <!-- Error message container -->
+        <div class="top-40 absolute right-0 z-50 w-full flex justify-center">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+          {% for category, message in messages %}
+          {% if category == 'error' %}
+          <div class="alert alert-danger">{{ message }}</div>
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+          {% endwith %}
+        </div>
+       <br><br>
+        <!--   Form part-->
+        <div class="flex justify-center items-center h-screen  place-items-center ">
+        <div id="form" class="bg-white block  p-6 rounded-xl shadow-md shadow-slate-300 w-90">
+          <form method="POST">
+               {{ form.hidden_tag() }}
+
+                     <center><img src="../static/assets/img/ayucare%20logo.png" class="w-20" >
+                    <h2 class="text-black text-3xl font-semibold my-4">AYUCARE</h2></center>
+
+                <!-- email -->
+                <label class="text-sm">Email</label><br>
+                {{ form.email }}
+
+               <!-- password -->
+                <label class="text-sm">Password</label><br>
+                {{ form.password }}
+
+                <br> <br>
+               <!-- Sign In -->
+                {{ form.submit }}<br>
+
+
+                <p class="text-xs my-2">Don't have an account? <a href="{{ url_for ('register') }}" class="text-blue-600">Register</a></p>
+            </form>
+        </div>
+    </div>
+       <!--   Form part-->
+
+       <!--  Footer section-->
+        <footer class="relative bg-gray-300 pt-8 pb-6">
+      <div
+        class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+        style="height: 80px;"
+      >
+        <svg
+          class="absolute bottom-0 overflow-hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          version="1.1"
+          viewBox="0 0 2560 100"
+          x="0"
+          y="0"
+        >
+          <polygon
+            class="text-gray-300 fill-current"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
+        </svg>
+      </div>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap">
+          <div class="w-full lg:w-6/12 px-4">
+            <h4 class="text-3xl font-semibold">AYUCARE</h4>
+{#              <img src="../static/assets/img/ayucare%20logo.png" alt="img" >#}
+
+
+          </div>
+          <div class="w-full lg:w-6/12 px-4">
+            <div class="flex flex-wrap items-top mb-6">
+              <div class="w-full lg:w-4/12 px-4 ml-auto">
+                <span
+                  class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                  >Useful Links</span
+                >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="{{ url_for('service') }}">
+                      Services</a
+                    >
+                  </li>
+
+                </ul>
+              </div>
+              <div class="w-full lg:w-4/12 px-4">
+                <span
+                  class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                  >Other Resources</span
+                >
+                <ul class="list-unstyled">
+
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Terms &amp; Conditions</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="my-6 border-gray-400" />
+        <div
+          class="flex flex-wrap items-center md:justify-between justify-center"
+        >
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-gray-600 font-semibold py-1">
+              Copyright © 2023 AyuCare
+              <a
+                href="#"
+                class="text-gray-600 hover:text-gray-900"
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+        <!--  Footer section-->
+
+</body>
+</html>

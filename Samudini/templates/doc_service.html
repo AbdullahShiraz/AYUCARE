@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"/>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+     <link rel="shortcut icon" href="../static/assets/img/ayucare%20logo.png" />
+      <style>
+        .modal {
+          transition: opacity 0.25s ease;
+        }
+        body.modal-active {
+          overflow-x: hidden;
+          overflow-y: visible !important;
+        }
+      </style>
+
+ <title>Service</title>
+</head>
+<body class="text-black bg-white">
+
+        <!--  Navigation Bar-->
+         <nav class="flex items-center text-black ">
+             <div class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 shadow-xl ">
+                 <a href="{{ url_for('index') }}"><img src="../static/assets/img/ayucare%20logo.png" class="w-20 cursor-pointer"></a>
+            <ul class="flex-1 text-center text-black">
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('index') }}" class="no-underline px-2">Home</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('service') }}" class="no-underline px-2">Diease Detection</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('med_service') }}" class="no-underline px-2">Medicine Recommendation</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('doc_service') }}" class="no-underline px-2">Treatment centers</a></li>
+                <li class="list-none inline-block px-5 text-lg leading-lg hover:underline hover:bg-gray-200 hover:font-bold hover:rounded-full"><a href="{{ url_for('faq') }}" class="no-underline px-2">FAQs</a></li>
+    
+                </a>
+                  </li>
+              </ul>
+
+             </div>
+             </nav>
+         <!--  Navigation Bar-->
+
+        <br>
+        <br>
+        <br>
+
+        <section class="pb-20 -mt-24 " style="padding-top: 150px; padding-left: 50px;padding-right: 50px">
+
+            <!--Patient details card-->
+            <div class="flex justify-left ">
+              <div
+                class="flex flex-col rounded-lg bg-white shadow-lg  md:max-w-xl md:flex-row">
+                <img
+                  class="h-auto max-w-xs rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                  src="../static/assets/img/avatar.png"
+                  alt="" />
+                <div class="flex flex-col justify-start p-6">
+                  <h5
+                    class="mb-2 text-xl font-medium ">
+                    Patient {{ id }}
+                  </h5>
+                  <lable class="mb-4 text-base ">
+                    Name &nbsp;&nbsp;:&nbsp;&nbsp;{{ name }}  <br>Age &nbsp;&nbsp;&nbsp;   :&nbsp;&nbsp;{{ age }}   <br>Gender &nbsp;&nbsp;:&nbsp;&nbsp;{{ gender }}
+                  </lable>
+
+                </div>
+              </div>
+            </div>
+             <!--Patient details card-->
+            <br><br>
+
+            <!-- Jumbotron -->
+            <div class="rounded-lg bg-neutral-100 p-6  shadow-lg   dark:shadow-black/30 py-8">
+              <h3 class="mb-5 text-2xl font-semibold">Suggested Treatment Centers</h3>
+                <p class="text-xs">
+                    <p class="text-s">Discover treatment centers where specialized doctors consult. Enlarge the Map if necessary. Thank you!</p><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d126758.22722458225!2d79.84059735645762!3d6.867269467920263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sayurvedic%20specialist%20doctor%20in%20colombo!5e0!3m2!1sen!2slk!4v1680982414221!5m2!1sen!2slk" width="1100" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </p><br>
+            </div>
+            <!-- Jumbotron -->
+
+
+
+        </section>
+
+       <!--   Footer section-->
+        <footer class="relative bg-gray-300 pt-8 pb-6">
+      <div
+        class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+        style="height: 80px;"
+      >
+        <svg
+          class="absolute bottom-0 overflow-hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          version="1.1"
+          viewBox="0 0 2560 100"
+          x="0"
+          y="0"
+        >
+          <polygon
+            class="text-gray-300 fill-current"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
+        </svg>
+      </div>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap">
+          <div class="w-full lg:w-6/12 px-4">
+            <h4 class="text-3xl font-semibold">AYUCARE</h4>
+
+          </div>
+          <div class="w-full lg:w-6/12 px-4">
+            <div class="flex flex-wrap items-top mb-6">
+              <div class="w-full lg:w-4/12 px-4 ml-auto">
+                <span
+                  class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                  >Useful Links</span
+                >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="{{ url_for('service') }}">
+                      Services</a
+                    >
+                  </li>
+
+                </ul>
+              </div>
+              <div class="w-full lg:w-4/12 px-4">
+                <span
+                  class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                  >Other Resources</span
+                >
+                <ul class="list-unstyled">
+
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Terms &amp; Conditions</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="#"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="my-6 border-gray-400" />
+        <div
+          class="flex flex-wrap items-center md:justify-between justify-center"
+        >
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-gray-600 font-semibold py-1">
+              Copyright © 2023 AyuCare
+              <a
+                href="#"
+                class="text-gray-600 hover:text-gray-900"
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+        <!--   Footer section-->
+
+  <script>
+    var openmodal = document.querySelectorAll('.modal-open')
+    for (var i = 0; i < openmodal.length; i++) {
+      openmodal[i].addEventListener('click', function(event){
+    	event.preventDefault()
+    	toggleModal()
+      })
+    }
+
+    const overlay = document.querySelector('.modal-overlay')
+    overlay.addEventListener('click', toggleModal)
+
+    var closemodal = document.querySelectorAll('.modal-close')
+    for (var i = 0; i < closemodal.length; i++) {
+      closemodal[i].addEventListener('click', toggleModal)
+    }
+
+    document.onkeydown = function(evt) {
+      evt = evt || window.event
+      var isEscape = false
+      if ("key" in evt) {
+    	isEscape = (evt.key === "Escape" || evt.key === "Esc")
+      } else {
+    	isEscape = (evt.keyCode === 27)
+      }
+      if (isEscape && document.body.classList.contains('modal-active')) {
+    	toggleModal()
+      }
+    };
+
+
+    function toggleModal () {
+      const body = document.querySelector('body')
+      const modal = document.querySelector('.modal')
+      modal.classList.toggle('opacity-0')
+      modal.classList.toggle('pointer-events-none')
+      body.classList.toggle('modal-active')
+    }
+
+
+  </script>
+
+</body>
+</html>
